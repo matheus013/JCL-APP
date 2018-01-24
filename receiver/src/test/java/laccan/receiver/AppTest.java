@@ -1,4 +1,4 @@
-package laccan.gatewayApp;
+package laccan.receiver;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

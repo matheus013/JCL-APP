@@ -7,7 +7,7 @@
  * last update at August 19, 2017
  **/
 
-package laccan.gatewayApp;
+package laccan.receiver;
 
 import implementations.dm_kernel.user.JCL_FacadeImpl;
 import interfaces.kernel.JCL_facade;

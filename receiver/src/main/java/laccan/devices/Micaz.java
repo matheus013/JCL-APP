@@ -2,8 +2,8 @@ package laccan.devices;
 
 import implementations.dm_kernel.user.JCL_FacadeImpl;
 import interfaces.kernel.JCL_facade;
-import laccan.gatewayApp.EnvironmentMonitor;
-import laccan.gatewayApp.Server;
+import laccan.receiver.EnvironmentMonitor;
+import laccan.receiver.Server;
 import laccan.memory.Memory;
 import net.tinyos.message.Message;
 import net.tinyos.message.MessageListener;
