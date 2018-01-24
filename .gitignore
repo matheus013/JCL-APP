@@ -75,6 +75,7 @@
 
 # Script file
 *.sh
+*.bat
 
 # BlueJ files
 *.ctxt
