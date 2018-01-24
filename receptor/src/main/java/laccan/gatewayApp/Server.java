@@ -61,6 +61,8 @@ public class Server {
 
         JCL_facade jcl = JCL_FacadeImpl.getInstance();
         jcl.instantiateGlobalVarAsy("lastReading", micazTemp);
+        System.out.println("Temporary variable created.");
+        jcl.executeAll("reduction");
     }
 
     private static void nodeCheck(String id) {
