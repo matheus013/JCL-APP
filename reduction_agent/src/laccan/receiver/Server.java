@@ -7,7 +7,7 @@
  * last update at August 19, 2017
  **/
 
-package laccan.gatewayApp;
+package laccan.receiver;
 
 import implementations.sm_kernel.JCL_FacadeImpl;
 import interfaces.kernel.JCL_facade;
@@ -22,7 +22,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Server {
 

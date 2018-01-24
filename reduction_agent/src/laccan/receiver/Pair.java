@@ -1,4 +1,4 @@
-package laccan.gatewayApp;
+package laccan.receiver;
 
 public class Pair<F, S> {
 

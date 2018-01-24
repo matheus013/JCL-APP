@@ -48,12 +48,14 @@ public class Server {
         if (jcl.containsGlobalVar("init")) return;
         ArrayList<String> nodeIDs = new ArrayList<String>();
         Memory memory = new Memory();
-        memory.buildRandomReduction(10);
+//        memory.buildRandomReduction(25);
+        memory.buildAllaReduction(25);
         jcl.instantiateGlobalVarAsy("nodes", nodeIDs);
         jcl.instantiateGlobalVarAsy("buffer", memory);
         jcl.instantiateGlobalVarAsy("init", "init");
         jcl.register(new File[]{new File(
-                        "/home/matheus/jcl-apps/fog/out/artifacts/fog_jar/fog.jar")},
+                "/home/matheus/jcl-apps/reduction_agent/out/artifacts/reduction_agent_jar/reduction_agent.jar")},
                 "reduction");
+
     }
 }

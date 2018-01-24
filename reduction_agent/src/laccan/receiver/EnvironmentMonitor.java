@@ -12,7 +12,7 @@
  *	last update at August 19, 2017
  **/
 
-package laccan.gatewayApp;
+package laccan.receiver;
 
 import java.util.ArrayList;
 import java.util.List;

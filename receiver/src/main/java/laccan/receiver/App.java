@@ -14,6 +14,7 @@ import laccan.devices.Micaz;
 public class App {
     public static void main(String[] args) {
         Server.init();
+        // implementar metodo para detecção de crossbow
         Micaz micaz = new Micaz("serial@/dev/ttyUSB1:57600");
     }
 }

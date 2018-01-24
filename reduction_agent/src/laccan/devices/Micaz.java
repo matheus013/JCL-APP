@@ -2,8 +2,8 @@ package laccan.devices;
 
 import implementations.dm_kernel.user.JCL_FacadeImpl;
 import interfaces.kernel.JCL_facade;
-import laccan.gatewayApp.EnvironmentMonitor;
-import laccan.gatewayApp.Server;
+import laccan.receiver.EnvironmentMonitor;
+import laccan.receiver.Server;
 import laccan.memory.Memory;
 import net.tinyos.message.Message;
 import net.tinyos.message.MessageListener;
@@ -102,7 +102,7 @@ public class Micaz implements MessageListener {
         return ch0Counts * 0.46 * Math.exp(pConst);
     }
 
-    private double[] calculateSensirion(int Temperature, int Humidity) {
+    public static double[] calculateSensirion(int Temperature, int Humidity) {
         double[] converted = new double[2];
         converted[0] = -39.4 + (0.01 * (double) Temperature);
         converted[1] = (-2.0468 + 0.0367 * (double) Humidity - 0.0000015955 * Math.pow((double) Humidity, (double) 2))
