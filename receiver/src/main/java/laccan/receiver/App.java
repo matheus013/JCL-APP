@@ -1,10 +1,10 @@
 /**
- * @author <Geymerson Ramos>
- * @email: <geymerson@laccan.ufal.com>
+ * @author <Matheus Inácio>
+ * @email: <matheus.inacio@laccan.ufal.com>
  * Universidade Federal de Alagoas - UFAL
  * Laboratório de Computação Científica e Análise Numérica - LACCAN
  * <p>
- * last update at August 19, 2017
+ * last update at January 15, 2017
  **/
 
 package laccan.receiver;
