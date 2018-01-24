@@ -77,6 +77,9 @@
 *.sh
 *.bat
 
+# JCL file
+*.properties
+
 # BlueJ files
 *.ctxt
 
