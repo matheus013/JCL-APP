@@ -1,4 +1,13 @@
-package laccan.ufal;
+/**
+ * @author <Matheus Inácio>
+ * @email: <matheus.inacio@laccan.ufal.com>
+ * Universidade Federal de Alagoas - UFAL
+ * Laboratório de Computação Científica e Análise Numérica - LACCAN
+ * <p>
+ * last update at January 15, 2017
+ **/
+
+package laccan.main;
 
 import implementations.dm_kernel.user.JCL_FacadeImpl;
 import interfaces.kernel.JCL_facade;

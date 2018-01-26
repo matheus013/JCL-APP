@@ -13,7 +13,6 @@ public abstract class Container {
 		return content.size();
 	}
 
-	@SuppressWarnings("unchecked")
 	public ArrayList<MicazMsg> get() {
 		return (ArrayList<MicazMsg>) content.clone();
 	}
