@@ -13,7 +13,7 @@ import implementations.dm_kernel.user.JCL_FacadeImpl;
 import interfaces.kernel.JCL_facade;
 import interfaces.kernel.JCL_result;
 import laccan.devices.MicazMsg;
-import laccan.utils.Pair;
+import laccan.devices.helper.utils.Pair;
 import laccan.cloud.prediction.Mean;
 
 import java.util.ArrayList;

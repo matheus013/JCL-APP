@@ -2,8 +2,7 @@ package laccan.devices;
 
 import implementations.dm_kernel.user.JCL_FacadeImpl;
 import interfaces.kernel.JCL_facade;
-import laccan.devices.helper.EnvironmentMonitor;
-import laccan.utils.Assistant;
+import laccan.devices.helper.utils.Assistant;
 import laccan.memory.Memory;
 import net.tinyos.message.Message;
 import net.tinyos.message.MessageListener;
@@ -12,31 +11,27 @@ import net.tinyos.packet.BuildSource;
 import net.tinyos.packet.PhoenixSource;
 import net.tinyos.util.PrintStreamMessenger;
 
+/**
+ * Classe responsavel por receber e manipular mensagens recebidas de um Micaz.
+ */
 public class Micaz implements MessageListener {
 
-    private static String nativeLibraryPath =
-            System.getProperty("user.dir") + "/native/Linux/x86_64-unknown-linux-gnu/";
-
+    //private static String nativeLibraryPath =
+    //System.getProperty("user.dir") + "/src/libs/native/Linux/x86_64-unknown-linux-gnu/";
     //	static {
-    ////		System.load(nativeLibraryPath + "libgetenv.so");
-    ////		System.load(nativeLibraryPath + "libtoscomm.so");
+    //		System.load(nativeLibraryPath + "libgetenv.so");
+    //		System.load(nativeLibraryPath + "libtoscomm.so");
     //	}
 
     private PhoenixSource phoenix;
     private MoteIF mif;
     private long msDate;
 
-    //nodeID
     private int nodeID;
-    //light sensor
     private double light;
-    //temperature = [0] ºC, humidity = [1] %
     private double[] temperatureHumidity = new double[2];
-    //temperature = [0] ºC, pressure = [1] millibar
     private double[] temperaturePressure = new double[2];
-    //Current node voltage (in millivolt)
     private double voltage;
-    //Node location
     private String environment;
 
     public Micaz(final String source) {
@@ -45,32 +40,39 @@ public class Micaz implements MessageListener {
         mif.registerListener(new MicazMsg(), this);
     }
 
+    /**
+     * Quando uma mensagem é recebida, esse metodo é acionado
+     *
+     * @param dest_addr endereço do destinatario
+     * @param message   mensagem
+     */
     public void messageReceived(int dest_addr, Message message) {
-        msDate = System.currentTimeMillis();    //Get current date
+        msDate = System.currentTimeMillis();
         processPacket(message);
         printData(); //Display sensor data
-//		Assistant.saveData(toServerString(msg)); //Send to cloud
         Assistant.toFog(message);
     }
 
+    /**
+     * Processa mensagem recebidas
+     *
+     * @param message mensagem
+     */
     private void processPacket(Message message) {
         if (message instanceof MicazMsg) {
-            //Get packet
             MicazMsg tempMessage = (MicazMsg) message;
-
             nodeID = tempMessage.get_nodeid();
             JCL_facade jcl = JCL_FacadeImpl.getInstance();
             if (!jcl.containsGlobalVar(String.valueOf(nodeID)))
                 jcl.instantiateGlobalVarAsy(String.valueOf(nodeID), new Memory());
             try {
-                environment = EnvironmentMonitor.environments[(nodeID - 1) / 5];
+                environment = Assistant.environments[(nodeID - 1) / 5];
             } catch (ArrayIndexOutOfBoundsException e) {
                 environment = "unknownEnvironment";
                 System.out.println("Unexpected environment id error.");
             }
 
-            light =
-                    calculateTaosLight(tempMessage.get_VisLight_data(), tempMessage.get_InfLight_data());
+            light = calculateTaosLight(tempMessage.get_VisLight_data(), tempMessage.get_InfLight_data());
 
             temperatureHumidity =
                     calculateSensirion(tempMessage.get_Temp_data(), tempMessage.get_Hum_data());
@@ -78,13 +80,19 @@ public class Micaz implements MessageListener {
             temperaturePressure[0] = tempMessage.getElement_Intersema_data(0) / 10;
             temperaturePressure[1] = tempMessage.getElement_Intersema_data(1) / 10;
 
-            voltage =
-                    (1223 * 1024) / tempMessage.get_Voltage_data();
+            voltage = (1223 * 1024) / tempMessage.get_Voltage_data();
             return;
         }
         System.out.println("Unable to process packet.");
     }
 
+    /**
+     * Extrai dados de luminosidade dos das mensagens
+     *
+     * @param visibleLight  luz visivel
+     * @param infraredLight luz infravermelha
+     * @return valor da luminosidade em lux
+     */
     private double calculateTaosLight(int visibleLight, int infraredLight) {
         final int CHORD_VAL[] = {0, 16, 49, 115, 247, 511, 1039, 2095};
         final int STEP_VAL[] = {1, 2, 4, 8, 16, 32, 64, 128};
@@ -102,6 +110,13 @@ public class Micaz implements MessageListener {
         return ch0Counts * 0.46 * Math.exp(pConst);
     }
 
+    /**
+     * Extrai dados de temperatura e humidade dos das mensagens
+     *
+     * @param Temperature dados de temperatura no formato que sensor envia
+     * @param Humidity    dados de humidade no formato que sensor envia
+     * @return vetor onde na posição 0 temos temperatura e na posição 1 temos humidade
+     */
     public static double[] calculateSensirion(int Temperature, int Humidity) {
         double[] converted = new double[2];
         converted[0] = -39.4 + (0.01 * (double) Temperature);
@@ -110,7 +125,9 @@ public class Micaz implements MessageListener {
         return converted;
     }
 
-    @SuppressWarnings("unused")
+    /**
+     * imprime dados extraidos da mensagem
+     */
     private void printData() {
         System.out.println("Measured micaz data:");
         System.out.println();
@@ -124,23 +141,5 @@ public class Micaz implements MessageListener {
         System.out.printf("Taos light:             %.2f\n", light);
         System.out.println("Voltage:                " + voltage);
         System.out.println("date:\t\t\t" + msDate);
-    }
-
-    //Save sensor data to a formatted server string
-    @SuppressWarnings("unused")
-    private String toServerString(Message message) {
-        String data = String.format("nodeID=%s&nodeType=%s&"
-                        + "env_id=%s&sensirion_temp=%s&sensirion_hum=%s&"
-                        + "intersema_temp=%s&intersema_press=%s&light=%s&"
-                        + "voltage=%s&country=%s&state=%s&city=%s&"
-                        + "latitude=%s&longitude=%s&"
-                        + "date=%s",
-                nodeID, "micaz", environment,
-                temperatureHumidity[0], temperatureHumidity[1],
-                temperaturePressure[0], temperaturePressure[1], light,
-                voltage, "Brazil", "Alagoas", "Maceio",
-                "-9.555032", "-35.774708",
-                msDate);
-        return data;
     }
 }

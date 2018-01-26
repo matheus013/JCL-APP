@@ -2,7 +2,7 @@ package laccan.memory.data.reduction;
 
 import laccan.devices.MicazMsg;
 import laccan.memory.Container;
-import laccan.devices.compare.MicazCompare;
+import laccan.devices.compare.MicazCompareTemperature;
 
 import java.util.*;
 
@@ -16,7 +16,7 @@ public class AllaReduction extends Container {
     }
 
     private ArrayList<MicazMsg> sort(ArrayList<MicazMsg> array) {
-        Collections.sort(array, new MicazCompare());
+        Collections.sort(array, new MicazCompareTemperature());
         return array;
     }
 
@@ -46,7 +46,6 @@ public class AllaReduction extends Container {
             }
 
             for (Map.Entry<String, ArrayList<MicazMsg>> entry : aux.entrySet()) {
-                String key = entry.getKey();
                 ArrayList<MicazMsg> temp = entry.getValue();
                 temp = sort(temp);
                 temp = midst(temp);

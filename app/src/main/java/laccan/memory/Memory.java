@@ -5,8 +5,9 @@ import laccan.memory.data.reduction.AllaReduction;
 import laccan.memory.data.reduction.KeepingAll;
 import laccan.memory.data.reduction.RandomReduction;
 
-import java.util.ArrayList;
-
+/**
+ * Classe responsavel por contruir o buffer.
+ */
 public class Memory {
     private KeepingAll keepingAll;
     private Container dataContainer;
@@ -15,43 +16,88 @@ public class Memory {
     public Memory() {
     }
 
-    public KeepingAll fullGet() {
+    /**
+     * @return todas as mensagens recebidas.
+     */
+    public KeepingAll getFull() {
         return keepingAll;
     }
 
-    public void buildRandomReduction() {
-        dataContainer = new RandomReduction(capacity);
-        keepingAll = new KeepingAll();
+    /**
+     * inicia buffer com tamanho padrão 100, usando algoritmo de redução aleatoria.
+     */
+    private void buildRandomReduction() {
+        buildRandomReduction(this.capacity);
     }
 
-    public void buildRandomReduction(int capacity) {
+    /**
+     * inicia buffer com novo tamanho, usando algoritmo de redução aleatoria.
+     *
+     * @param capacity tamanho do buffer
+     */
+    private void buildRandomReduction(int capacity) {
         dataContainer = new RandomReduction(capacity);
         keepingAll = new KeepingAll();
         this.capacity = capacity;
     }
 
-    public void buildAllaReduction() {
-        dataContainer = new AllaReduction(capacity);
-        keepingAll = new KeepingAll();
+    /**
+     * inicia buffer com tamanho padrão 100, usando algoritmo de redução baseado em coorelação.
+     */
+    private void buildAllaReduction() {
+        buildAllaReduction(this.capacity);
     }
 
-    public void buildAllaReduction(int capacity) {
+    /**
+     * inicia buffer com novo tamanho, usando algoritmo de redução baseado em coorelação.
+     *
+     * @param capacity tamanho do buffer
+     */
+    private void buildAllaReduction(int capacity) {
         dataContainer = new AllaReduction(capacity);
         keepingAll = new KeepingAll();
         this.capacity = capacity;
     }
 
+    /**
+     * @return todas as mensagens no buffer
+     */
     public Container getMemory() {
         return dataContainer;
     }
 
+    /**
+     * Seleciona capacidade do buffer
+     *
+     * @param capacity
+     */
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
 
+    /**
+     * Adiciona mensagem ao buffer
+     *
+     * @param msg nova mensagem
+     */
     public void add(MicazMsg msg) {
-        fullGet().add(msg);
+        getFull().add(msg);
         getMemory().add(msg);
     }
 
+    /**
+     * Constroi de acordo com escolha
+     *
+     * @param reducerType
+     */
+    public void build(String reducerType) {
+        this.capacity = 100;
+        if (reducerType.equals("alla")) {
+            buildAllaReduction();
+        } else if (reducerType.equals("random")) {
+            buildRandomReduction();
+        } else {
+            buildRandomReduction();
+        }
+    }
 }

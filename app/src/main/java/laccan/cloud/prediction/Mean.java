@@ -2,7 +2,7 @@ package laccan.cloud.prediction;
 
 import laccan.cloud.parse.ParseMessage;
 import laccan.devices.MicazMsg;
-import laccan.utils.Pair;
+import laccan.devices.helper.utils.Pair;
 
 import java.util.ArrayList;
 import java.util.HashMap;
