@@ -7,9 +7,10 @@
  * last update at January 15, 2017
  **/
 
-package laccan.receiver;
+package laccan.main;
 
 import laccan.devices.Micaz;
+import laccan.receiver.Server;
 
 public class App {
     public static void main(String[] args) {
