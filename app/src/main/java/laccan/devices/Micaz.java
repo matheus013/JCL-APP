@@ -1,9 +1,6 @@
 package laccan.devices;
 
-import implementations.dm_kernel.user.JCL_FacadeImpl;
-import interfaces.kernel.JCL_facade;
 import laccan.devices.helper.utils.Assistant;
-import laccan.memory.Memory;
 import net.tinyos.message.Message;
 import net.tinyos.message.MessageListener;
 import net.tinyos.message.MoteIF;
@@ -62,9 +59,7 @@ public class Micaz implements MessageListener {
         if (message instanceof MicazMsg) {
             MicazMsg tempMessage = (MicazMsg) message;
             nodeID = tempMessage.get_nodeid();
-            JCL_facade jcl = JCL_FacadeImpl.getInstance();
-            if (!jcl.containsGlobalVar(String.valueOf(nodeID)))
-                jcl.instantiateGlobalVarAsy(String.valueOf(nodeID), new Memory());
+
             try {
                 environment = Assistant.environments[(nodeID - 1) / 5];
             } catch (ArrayIndexOutOfBoundsException e) {

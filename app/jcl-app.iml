@@ -72,6 +72,7 @@
     </orderEntry>
     <orderEntry type="library" name="nesc" level="project" />
     <orderEntry type="library" name="jclUser" level="project" />
+    <orderEntry type="library" name="commons-cli:commons-cli:1.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver:3.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:bson:3.0.4" level="project" />
@@ -112,6 +113,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="commons-cli:commons-cli:1.4" level="project" />
   </component>
 </module>
