@@ -10,13 +10,15 @@
 
 package laccan.devices.helper;
 
+import laccan.utils.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class WSN {
 
 	private static WSN wsn = null;
-	private List< Pair<String, Integer> > onlineDevices = new ArrayList< Pair<String, Integer> >();
+	private List<Pair<String, Integer>> onlineDevices = new ArrayList< Pair<String, Integer> >();
 
 	private WSN(){ }
 

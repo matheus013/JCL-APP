@@ -14,6 +14,8 @@
 
 package laccan.devices.helper;
 
+import laccan.utils.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
 

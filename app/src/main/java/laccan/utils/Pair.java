@@ -12,6 +12,6 @@ public class Pair<F, S> {
 
     public F getFirst(){ return f; }
     public S getSecond(){ return s; }
-    public void setL(F f){ this.f = f; }
-    public void setR(S s){ this.s = s; }
+    public void setFirst(F f){ this.f = f; }
+    public void setSecond(S s){ this.s = s; }
 }

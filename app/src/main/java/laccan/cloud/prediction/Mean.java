@@ -1,8 +1,8 @@
 package laccan.cloud.prediction;
 
+import laccan.cloud.parse.ParseMessage;
 import laccan.devices.MicazMsg;
 import laccan.utils.Pair;
-import laccan.cloud.parse.ParseMessage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ public class Mean extends Predictor {
 
     @Override
     public void train() {
-        this.average = new HashMap<>();
+        this.average = new HashMap<String, Double>();
         for (Object object : this.input) {
             double average = this.average.get(ParseMessage.type(object));
             average += ParseMessage.temperature(object);
@@ -23,7 +23,7 @@ public class Mean extends Predictor {
 
     @Override
     public ArrayList<Pair<String, Double>> result(ArrayList<MicazMsg> test) {
-        ArrayList<Pair<String, Double>> result = new ArrayList<>();
+        ArrayList<Pair<String, Double>> result = new ArrayList<Pair<String, Double>>();
         for (Object object : test) {
             String key = ParseMessage.id(object);
             Double pre = this.average.get(ParseMessage.type(object));
