@@ -19,6 +19,9 @@ import laccan.memory.Memory;
 
 import java.util.ArrayList;
 
+/**
+ * fazer predrição de um conjunto de valores
+ */
 public class PreditorApp {
     public static void main(String[] args) {
         JCL_facade jcl = JCL_FacadeImpl.getInstance();

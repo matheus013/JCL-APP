@@ -6,6 +6,9 @@ import laccan.memory.Container;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Algoritmo de redução, com descarte baseado em aleatorio
+ */
 public class RandomReduction extends Container {
     private int capacity;
 
@@ -15,6 +18,11 @@ public class RandomReduction extends Container {
         this.content = new ArrayList<MicazMsg>();
     }
 
+    /**
+     * Adiciona nova mensagem ao buffer, se buffer estiver cheio aplica politica de redução
+     *
+     * @param msg nova mensagem
+     */
     @Override
     public void add(MicazMsg msg) {
         // TODO Auto-generated method stub

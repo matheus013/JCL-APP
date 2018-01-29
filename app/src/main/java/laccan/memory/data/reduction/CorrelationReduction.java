@@ -6,10 +6,13 @@ import laccan.devices.compare.MicazCompareTemperature;
 
 import java.util.*;
 
-public class AllaReduction extends Container {
+/**
+ * Algoritmo de redução, com descarte baseado em correlação
+ */
+public class CorrelationReduction extends Container {
     private int capacity;
 
-    public AllaReduction(int capacity) {
+    public CorrelationReduction(int capacity) {
         super();
         this.capacity = capacity;
         content = new ArrayList<MicazMsg>();
@@ -29,6 +32,11 @@ public class AllaReduction extends Container {
         return result;
     }
 
+    /**
+     * Adiciona nova mensagem ao buffer, se buffer estiver cheio aplica algoritmo de redução
+     *
+     * @param msg nova mensagem
+     */
     @Override
     public void add(MicazMsg msg) {
         if (length() < capacity) {

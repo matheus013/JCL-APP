@@ -15,6 +15,11 @@ import interfaces.kernel.JCL_result;
 import laccan.devices.MicazMsg;
 import laccan.memory.Memory;
 
+/**
+ * Aplicar algoritmo de redução
+ *
+ * @author Matheus In&aacute;cio
+ */
 public class ReducerApp {
     public static void main(String[] args) {
         JCL_facade jcl = JCL_FacadeImpl.getInstance();
@@ -26,7 +31,7 @@ public class ReducerApp {
             buffer.add(micazTemp);
 
             jcl.setValueUnlocking("buffer", buffer);
-        } else System.out.println("Failed to access memory.");
+        } else System.out.println("Null message.");
         jcl.deleteGlobalVar("lastReading");
     }
 }

@@ -1,7 +1,7 @@
 package laccan.memory;
 
 import laccan.devices.MicazMsg;
-import laccan.memory.data.reduction.AllaReduction;
+import laccan.memory.data.reduction.CorrelationReduction;
 import laccan.memory.data.reduction.KeepingAll;
 import laccan.memory.data.reduction.RandomReduction;
 
@@ -54,7 +54,7 @@ public class Memory {
      * @param capacity tamanho do buffer
      */
     private void buildAllaReduction(int capacity) {
-        dataContainer = new AllaReduction(capacity);
+        dataContainer = new CorrelationReduction(capacity);
         keepingAll = new KeepingAll();
         this.capacity = capacity;
     }
