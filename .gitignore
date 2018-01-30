@@ -77,11 +77,17 @@
 *.sh
 *.bat
 
+# Storage
+*.csv
+
 # JCL file
 *.properties
 
 # BlueJ files
 *.ctxt
+
+# C
+*.out
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
