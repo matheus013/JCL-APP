@@ -12,7 +12,7 @@ On GitHub [here](https://github.com/matheus013/JCL-APP).
 How do I run it?
 ================
 
-You must first start a JCL cluster, having a _Crossbow MPR2600_ along with a micaz network. You should then import the JCL Gateway project. Generate .jar for the following classes: _laccan.main.InitApp_, _laccan.main.PreditorApp_, and _laccan.main.ReducerApp_; remembering to change the path in line 76 in the _laccan.devices.helper.utils.Assistent_ class, before generating .jar from InitApp. All done should connect _Crossbow MPR2600_  and give permission, in case of Ubuntu using the command `sudo` chmod `-x /dev/ttyUSB1` and then run _laccan.main.ReceiverApp_.
+You must first start a JCL cluster, having a _Crossbow MPR2600_ along with a micaz network. You should then import the JCL Gateway project. Generate .jar for the following classes: _laccan.main.InitApp_, _laccan.main.PreditorApp_, and _laccan.main.ReducerApp_; remembering to change the path in line 76 in the _laccan.devices.helper.utils.Assistent_ class, before generating .jar from InitApp. All done should connect _Crossbow MPR2600_  and give permission, in case of Ubuntu using the command `sudo chmod -x /dev/ttyUSB1` and then run _laccan.main.ReceiverApp_.
 
 ![](images/init.png) 
 
