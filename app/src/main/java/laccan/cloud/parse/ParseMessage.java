@@ -6,6 +6,9 @@ import interfaces.kernel.JCL_result;
 import laccan.devices.Micaz;
 import laccan.devices.MicazMsg;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 /**
  * Extrair informações das mensagens de forma simplificada
  */
@@ -33,6 +36,30 @@ public class ParseMessage {
         String key = String.valueOf(micazMsg.get_nodeid());
         JCL_result result = jcl.getValueLocking("type:" + key);
         return result.getCorrectResult().toString();
+    }
+
+    /**
+     * extrai tipo do nó que enviou mensagem
+     *
+     * @param object mensagem
+     * @return tipo do nó, que pode ser indoor(1.0) ou outdoor(0.0)
+     */
+    public static double typeNumeric(Object object) {
+        String aux = ParseMessage.type(object);
+        return (aux == "indoor") ? 1.0 : 0.0;
+    }
+
+    public static double timeNormalized(Object object) {
+        return 0;
+    }
+
+    public static double stringToNumeric(String str) {
+        LocalDateTime dateTime = LocalDateTime.parse(str);
+        LocalTime time = dateTime.toLocalTime();
+        System.out.println(time.toNanoOfDay());
+        System.out.println(LocalTime.MAX.toNanoOfDay());
+        return ((double) time.toNanoOfDay()) / ((double) LocalTime.MAX.toNanoOfDay());
+
     }
 
     /**

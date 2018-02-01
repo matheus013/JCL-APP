@@ -10,7 +10,7 @@ import implementations.dm_kernel.user.JCL_FacadeImpl;
 import interfaces.kernel.JCL_facade;
 import interfaces.kernel.JCL_result;
 import laccan.devices.MicazMsg;
-import laccan.memory.Memory;
+import laccan.memory.builder.Memory;
 import net.tinyos.message.Message;
 
 import java.io.File;

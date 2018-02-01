@@ -1,6 +1,7 @@
 package laccan.cloud.prediction;
 
 
+import laccan.cloud.parse.ParseMessage;
 import laccan.devices.MicazMsg;
 import laccan.devices.helper.utils.Pair;
 import smile.interpolation.KrigingInterpolation;
@@ -26,6 +27,14 @@ public class KrigingPrediction extends Predictor {
     }
 
     private void normalize() {
+        int i = 0;
+        for (Object object : this.input) {
+            double temperature = ParseMessage.temperature(object);
+            double type = ParseMessage.typeNumeric(object);
+            y[i] = temperature;
 
+            x[i++][1] = type;
+
+        }
     }
 }

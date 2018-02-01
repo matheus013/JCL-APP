@@ -1,7 +1,6 @@
-package laccan.memory.data.reduction;
+package laccan.memory.reduction;
 
 import laccan.devices.MicazMsg;
-import laccan.memory.Container;
 import laccan.devices.compare.MicazCompareTemperature;
 
 import java.util.*;

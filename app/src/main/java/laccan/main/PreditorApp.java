@@ -15,7 +15,7 @@ import interfaces.kernel.JCL_result;
 import laccan.devices.MicazMsg;
 import laccan.devices.helper.utils.Pair;
 import laccan.cloud.prediction.Mean;
-import laccan.memory.Memory;
+import laccan.memory.builder.Memory;
 
 import java.util.ArrayList;
 

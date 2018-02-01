@@ -1,7 +1,6 @@
-package laccan.memory.data.reduction;
+package laccan.memory.reduction;
 
 import laccan.devices.MicazMsg;
-import laccan.memory.Container;
 
 import java.util.ArrayList;
 import java.util.Random;

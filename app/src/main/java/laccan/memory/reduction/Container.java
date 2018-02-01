@@ -1,4 +1,4 @@
-package laccan.memory;
+package laccan.memory.reduction;
 
 import laccan.devices.MicazMsg;
 

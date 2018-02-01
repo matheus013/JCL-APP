@@ -1,9 +1,10 @@
-package laccan.memory;
+package laccan.memory.builder;
 
 import laccan.devices.MicazMsg;
-import laccan.memory.data.reduction.CorrelationReduction;
-import laccan.memory.data.reduction.KeepingAll;
-import laccan.memory.data.reduction.RandomReduction;
+import laccan.memory.reduction.Container;
+import laccan.memory.reduction.CorrelationReduction;
+import laccan.memory.reduction.KeepingAll;
+import laccan.memory.reduction.RandomReduction;
 
 /**
  * Classe responsavel por contruir o buffer.
