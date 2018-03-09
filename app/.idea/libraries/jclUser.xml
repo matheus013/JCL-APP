@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jclUser">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../jcl/jcl_binaries/jclUser.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../jcl/jcl_binaries/jclUser.jar!/" />
+    </SOURCES>
+  </library>
+</component>
