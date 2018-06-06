@@ -1,0 +1,13 @@
+cloud.prediction.Predictor
+cloud.prediction.Regression
+devices.Micaz
+devices.MicazMsg
+devices.Sample
+devices.Type
+devices.helper.utils.Assistant
+lang.Lang
+memory.Container
+memory.Memory
+memory.data.reduction.KeepingAll
+persistence.Storage
+persistence.StorageCSV

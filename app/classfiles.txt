@@ -1,0 +1,13 @@
+laccan.cloud.prediction.Predictor
+laccan.cloud.prediction.Regression
+laccan.devices.Micaz
+laccan.devices.MicazMsg
+laccan.devices.Sample
+laccan.devices.Type
+laccan.devices.helper.utils.Assistant
+laccan.lang.Lang
+laccan.memory.Container
+laccan.memory.Memory
+laccan.memory.data.reduction.KeepingAll
+laccan.persistence.Storage
+laccan.persistence.StorageCSV

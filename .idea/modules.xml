@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/android_app/app/src/androidTest/androidTest.iml" filepath="$PROJECT_DIR$/android_app/app/src/androidTest/androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway-gey/src/main/main.iml" filepath="$PROJECT_DIR$/gateway-gey/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/src/main/main1.iml" filepath="$PROJECT_DIR$/app/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android_app/app/src/main/main2.iml" filepath="$PROJECT_DIR$/android_app/app/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sensor/sensor.iml" filepath="$PROJECT_DIR$/sensor/sensor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android_app/app/src/test/test.iml" filepath="$PROJECT_DIR$/android_app/app/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway-gey/src/test/test1.iml" filepath="$PROJECT_DIR$/gateway-gey/src/test/test1.iml" />
+    </modules>
+  </component>
+</project>
