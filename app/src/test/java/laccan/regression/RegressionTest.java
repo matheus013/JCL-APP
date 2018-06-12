@@ -1,4 +1,4 @@
-package laccan;
+package laccan.regression;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
