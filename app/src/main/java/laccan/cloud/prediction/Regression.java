@@ -22,6 +22,10 @@ public class Regression extends Predictor {
     }
 
     public List<Double> result() {
+        if (input == null)
+            return new ArrayList<>();
+        if (output == null)
+            output = makeTests(input);
         return result(output);
     }
 
@@ -31,8 +35,6 @@ public class Regression extends Predictor {
     }
 
     private double[][] getData() {
-        double[] times = new double[input.size()];
-        double[] temperatures = new double[input.size()];
         double[][] samples = new double[input.size()][];
         for (int i = 0; i < input.size(); i++) {
             samples[i] = new double[]{input.get(i).getDateDouble(), input.get(i).getTemperature()};

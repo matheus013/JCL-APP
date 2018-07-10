@@ -1,12 +1,12 @@
 package laccan.persistence;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 
 public class NumericValidation extends ValidSample {
     @Override
     public boolean test(String[] record) {
         for (String s : record) {
-            if (!StringUtils.isNumeric(s)) return false;
+            if (!NumberUtils.isParsable(s)) return false;
         }
         return true;
     }

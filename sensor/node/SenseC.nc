@@ -61,7 +61,9 @@ implementation {
     event void Control.stopDone(error_t err) { /* NOT IMPLEMENTED */ }
 
     event void Timer.fired() {
-        call Temperature.read();
+        if(clockCounter % 60){
+          call Temperature.read();
+        }
         if(clockCounter >= PERIODICITY_MULTIPLIER - RATE) {
             clockCounter = 1;
             call Voltage.read();

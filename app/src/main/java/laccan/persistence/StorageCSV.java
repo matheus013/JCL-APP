@@ -23,13 +23,15 @@ public class StorageCSV implements Storage {
     public List<Sample> read() {
         List<Sample> list = new ArrayList<>();
         ReadCSVProxy csvProxy = new ReadCSVProxy(filename);
-        if (!csvProxy.load()) return list;
+        if (!csvProxy.load()) return null;
         try (Reader reader = Files.newBufferedReader(Paths.get(this.filename))) {
             try (CSVReader csvReader = new CSVReader(reader)) {
                 String[] nextRecord;
                 NumericValidation validation = new NumericValidation();
                 while ((nextRecord = csvReader.readNext()) != null) {
+//                    System.out.println(nextRecord[]);
                     if (!validation.testWithSize(nextRecord, 2)) continue;
+                    System.out.println(nextRecord);
                     list.add(new Sample("2", Double.valueOf(nextRecord[1]), Long.valueOf(nextRecord[0])));
                     System.out.println(nextRecord);
                 }

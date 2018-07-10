@@ -14,8 +14,8 @@ public abstract class Predictor {
 
 
     public void init(List<Sample> input, List<Double> output) {
-        this.input = input;
-        this.output = output;
+        setInput(input);
+        setOutput(output);
     }
 
     /**
@@ -35,4 +35,14 @@ public abstract class Predictor {
      * @return erro medio quadrado, respectivamente indoor e outdoor
      */
     public abstract double mse();
+
+    public Predictor setInput(List<Sample> input) {
+        this.input = input;
+        return this;
+    }
+
+    public Predictor setOutput(List<Double> output) {
+        this.output = output;
+        return this;
+    }
 }
