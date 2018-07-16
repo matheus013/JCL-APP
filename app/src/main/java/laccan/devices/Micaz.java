@@ -122,6 +122,14 @@ public class Micaz implements MessageListener {
         JCL_facade jcl = JCL_FacadeImpl.getInstance();
         JCL_result result = jcl.getValue(Lang.FULL_MEMORY_KEY);
         Memory fullMemory = (Memory) result.getCorrectResult();
+        result = jcl.getValue(Lang.MEMORY_KEY);
+        Memory memory = (Memory) result.getCorrectResult();
+
+        if (fullMemory.length() == 1440) {
+            fullMemory.clear();
+            memory.clear();
+        }
+
         for (int i = 0; i < 8; i++) {
             storageCSV
                     .local("full.csv")
@@ -130,9 +138,7 @@ public class Micaz implements MessageListener {
             fullMemory.add(sample);
         }
         boolean t = jcl.setValueUnlocking(Lang.FULL_MEMORY_KEY, fullMemory);
-        System.out.println(fullMemory.length());
-        result = jcl.getValue(Lang.MEMORY_KEY);
-        Memory memory = (Memory) result.getCorrectResult();
+        System.out.println(t);
         for (int i = 8; i < 10; i++) {
             storageCSV
                     .local("reduce.csv")

@@ -46,4 +46,8 @@ public class Memory {
     public int length() {
         return dataContainer.length();
     }
+
+    public void clear(){
+        buildContainer();
+    }
 }

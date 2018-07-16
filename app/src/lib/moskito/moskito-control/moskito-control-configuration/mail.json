@@ -1,0 +1,31 @@
+{
+    "defaultMessageSender" :"moskito-control@anotheria.net",
+    "defaultMessageSubject" : "Status changed",
+    "@notifications" : [
+        {
+            "applications" : ["APP1"],
+            "recipients" : ["recipient1@anotheria.net"],
+            "@notificationStatusChanges" : [
+                {
+                    "newColors" : ["RED", "PURPLE"],
+                    "oldColors" : ["NONE"]
+                }
+            ]
+        },
+        {
+            "applications" : ["APP2"],
+            "recipients" : ["recipient2@anotheria.net"],
+            "@notificationStatusChanges" : [
+                {
+                    "newColors" : ["RED", "PURPLE", "GREEN"],
+                    "oldColors" : []
+                }
+            ]
+        }
+    ],
+    "host" : "mail.anotheria.net",
+    "port" : 25,
+    "user" : "moskito@anotheria.net",
+    "password" : "moskito",
+    "debug" : true
+}

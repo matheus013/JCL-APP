@@ -1,0 +1,5 @@
+Configurations are located in moskito-control-configuration.
+Primary configuration is moskitocontrol.json (We provided a couple examples).
+Use ./start-moskito-control.sh to start moskito control and ./stop-moskito-control.sh to stop it.
+If started on localhost: http://localhost:8999 otherwise http://ip:8999 (or other port).
+Change port unter conf/server.xml (this is standard tomcat).

@@ -1,0 +1,17 @@
+<beans xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+       http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
+
+<interceptors>
+    <class>net.anotheria.moskito.integration.cdi.CountInterceptor</class>
+    <class>net.anotheria.moskito.integration.cdi.CallInterceptor</class>
+
+    <!-- Customized interceptors for @Monitor with parameters -->
+    <class>net.anotheria.moskito.integration.cdi.WebCallInterceptor<class>
+    <class>net.anotheria.moskito.integration.cdi.ServiceCallInterceptor</class>
+    <class>net.anotheria.moskito.integration.cdi.DaoCallInterceptor</class>
+
+    <!-- You may add your interceptor too -->
+    <class>com.company.project.moskitointegration.MobileCallInterceptor</class>
+</interceptors>
+</beans>

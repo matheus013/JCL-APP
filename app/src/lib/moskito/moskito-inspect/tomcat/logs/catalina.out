@@ -1,0 +1,903 @@
+10-Jul-2018 10:36:39.032 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.16
+10-Jul-2018 10:36:39.034 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 21 2017 17:01:09 UTC
+10-Jul-2018 10:36:39.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.16.0
+10-Jul-2018 10:36:39.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+10-Jul-2018 10:36:39.036 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.13.0-36-generic
+10-Jul-2018 10:36:39.036 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+10-Jul-2018 10:36:39.036 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+10-Jul-2018 10:36:39.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_171-b11
+10-Jul-2018 10:36:39.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+10-Jul-2018 10:36:39.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/matheus/JCL-APP/app/src/lib/moskito/moskito-inspect/tomcat
+10-Jul-2018 10:36:39.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/matheus/JCL-APP/app/src/lib/moskito/moskito-inspect/tomcat
+10-Jul-2018 10:36:39.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/matheus/JCL-APP/app/src/lib/moskito/moskito-inspect/tomcat/conf/logging.properties
+10-Jul-2018 10:36:39.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+10-Jul-2018 10:36:39.037 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.rmi.transport.tcp.handshakeTimeout=5000
+10-Jul-2018 10:36:39.038 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+10-Jul-2018 10:36:39.038 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+10-Jul-2018 10:36:39.038 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/matheus/JCL-APP/app/src/lib/moskito/moskito-inspect/tomcat
+10-Jul-2018 10:36:39.038 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/matheus/JCL-APP/app/src/lib/moskito/moskito-inspect/tomcat
+10-Jul-2018 10:36:39.038 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/matheus/JCL-APP/app/src/lib/moskito/moskito-inspect/tomcat/temp
+10-Jul-2018 10:36:39.038 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+10-Jul-2018 10:36:40.362 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8088"]
+10-Jul-2018 10:36:40.379 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+10-Jul-2018 10:36:40.382 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1793 ms
+10-Jul-2018 10:36:40.427 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+10-Jul-2018 10:36:40.427 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.16
+10-Jul-2018 10:36:40.449 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/matheus/JCL-APP/app/src/lib/moskito/moskito-inspect/tomcat/webapps/moskito.war]
+10-Jul-2018 10:36:42.853 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+404 2018-07-10 10:36:43,286 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: ErrorProducer / BuiltInErrorProducer
+415 2018-07-10 10:36:43,297 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: JavaRuntimeFree / BuiltInMemoryProducer FreeMemoryResolver
+416 2018-07-10 10:36:43,298 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: JavaRuntimeMax / BuiltInMemoryProducer MaxMemoryResolver
+417 2018-07-10 10:36:43,299 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: JavaRuntimeTotal / BuiltInMemoryProducer TotalMemoryResolver
+433 2018-07-10 10:36:43,315 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: MemoryPool-Code Cache-NonHeap / BuiltInMemoryPoolProducer Code Cache
+435 2018-07-10 10:36:43,317 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: MemoryPool-Metaspace-NonHeap / BuiltInMemoryPoolProducer Metaspace
+438 2018-07-10 10:36:43,320 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: MemoryPool-Compressed Class Space-NonHeap / BuiltInMemoryPoolProducer Compressed Class Space
+447 2018-07-10 10:36:43,329 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: MemoryPool-PS Eden Space-Heap / BuiltInMemoryPoolProducer PS Eden Space
+448 2018-07-10 10:36:43,330 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: MemoryPool-PS Survivor Space-Heap / BuiltInMemoryPoolProducer PS Survivor Space
+449 2018-07-10 10:36:43,331 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: MemoryPool-PS Old Gen-Heap / BuiltInMemoryPoolProducer PS Old Gen
+451 2018-07-10 10:36:43,333 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: Heap memory / BuiltInMemoryPoolVirtualProducer
+452 2018-07-10 10:36:43,334 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: Non-heap memory / BuiltInMemoryPoolVirtualProducer
+456 2018-07-10 10:36:43,338 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: ThreadStates / BuiltInThreadStatesProducer
+460 2018-07-10 10:36:43,342 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: ThreadCount / BuiltInThreadCountProducer
+477 2018-07-10 10:36:43,359 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: OS / BuiltInOSProducer
+479 2018-07-10 10:36:43,361 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: Runtime / BuiltInRuntimeProducer
+482 2018-07-10 10:36:43,364 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: GC / BuiltInGCProducer
+515 2018-07-10 10:36:43,397 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: GlobalRequestProcessor / BuiltinGlobalRequestProcessorProducer
+517 2018-07-10 10:36:43,399 [localhost-startStop-1] INFO   n.a.m.c.plugins.PluginRepository:57 - Loading plugin PluginConfig (NoOpPlugin, net.anotheria.moskito.core.plugins.NoOpPlugin, none)
+525 2018-07-10 10:36:43,407 [localhost-startStop-1] INFO   n.a.m.core.plugins.NoOpPlugin:18 - NoOpPlugin initialized
+525 2018-07-10 10:36:43,407 [localhost-startStop-1] INFO   n.a.m.c.plugins.PluginRepository:57 - Loading plugin PluginConfig (DiskSpaceMonitoringPlugin, net.anotheria.moskito.extensions.DiskSpaceMonitoringPlugin, none)
+528 2018-07-10 10:36:43,410 [localhost-startStop-1] INFO   n.a.m.e.DiskSpaceMonitoringPlugin:35 - Found unknown disk in config: rooot/
+529 2018-07-10 10:36:43,411 [localhost-startStop-1] INFO   n.a.m.e.DiskSpaceMonitoringPlugin:35 - Found unknown disk in config: c:/
+529 2018-07-10 10:36:43,411 [localhost-startStop-1] INFO   n.a.m.e.DiskSpaceMonitoringPlugin:32 - : 
+535 2018-07-10 10:36:43,417 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: DiscSpaceUsable. path - / / net.anotheria.moskito.extensions.diskspacemonitoring.DiscSpaceProducer@55a342e DiscSpaceProducer
+539 2018-07-10 10:36:43,421 [localhost-startStop-1] INFO   n.a.m.c.plugins.PluginRepository:57 - Loading plugin PluginConfig (ApacheMonitoringPlugin, net.anotheria.moskito.extensions.monitoring.GenericMonitoringPlugin, monitoring-plugin-apache)
+552 2018-07-10 10:36:43,434 [localhost-startStop-1] INFO   n.a.m.e.m.GenericMonitoringPlugin:54 - Initializing net.anotheria.moskito.extensions.monitoring.GenericMonitoringPlugin...
+553 2018-07-10 10:36:43,435 [localhost-startStop-1] INFO   n.a.m.e.m.GenericMonitoringPlugin:55 - Configuring net.anotheria.moskito.extensions.monitoring.GenericMonitoringPlugin from 'monitoring-plugin-apache'
+563 2018-07-10 10:36:43,445 [localhost-startStop-1] INFO   n.a.m.e.m.GenericMonitoringPlugin:63 - Configured net.anotheria.moskito.extensions.monitoring.GenericMonitoringPlugin from 'monitoring-plugin-apache'
+565 2018-07-10 10:36:43,447 [localhost-startStop-1] INFO   n.a.m.e.m.GenericMonitor:81 - monitoring-plugin-apache config has empty array of monitored instances!
+565 2018-07-10 10:36:43,447 [localhost-startStop-1] INFO   n.a.m.e.m.GenericMonitoringPlugin:67 - ...net.anotheria.moskito.extensions.monitoring.GenericMonitoringPlugin initialized.
+565 2018-07-10 10:36:43,447 [localhost-startStop-1] INFO   n.a.m.c.plugins.PluginRepository:57 - Loading plugin PluginConfig (NginxMonitoringPlugin, net.anotheria.moskito.extensions.monitoring.GenericMonitoringPlugin, monitoring-plugin-nginx)
+565 2018-07-10 10:36:43,447 [localhost-startStop-1] INFO   n.a.m.e.m.GenericMonitoringPlugin:54 - Initializing net.anotheria.moskito.extensions.monitoring.GenericMonitoringPlugin...
+565 2018-07-10 10:36:43,447 [localhost-startStop-1] INFO   n.a.m.e.m.GenericMonitoringPlugin:55 - Configuring net.anotheria.moskito.extensions.monitoring.GenericMonitoringPlugin from 'monitoring-plugin-nginx'
+566 2018-07-10 10:36:43,448 [localhost-startStop-1] INFO   n.a.m.e.m.GenericMonitoringPlugin:63 - Configured net.anotheria.moskito.extensions.monitoring.GenericMonitoringPlugin from 'monitoring-plugin-nginx'
+567 2018-07-10 10:36:43,449 [localhost-startStop-1] INFO   n.a.m.e.m.GenericMonitor:81 - monitoring-plugin-nginx config has empty array of monitored instances!
+567 2018-07-10 10:36:43,449 [localhost-startStop-1] INFO   n.a.m.e.m.GenericMonitoringPlugin:67 - ...net.anotheria.moskito.extensions.monitoring.GenericMonitoringPlugin initialized.
+567 2018-07-10 10:36:43,449 [localhost-startStop-1] INFO   n.a.m.c.plugins.PluginRepository:57 - Loading plugin PluginConfig (MoskitoPHPPlugin, net.anotheria.extensions.php.MoskitoPHPPlugin, moskito-php)
+640 2018-07-10 10:36:43,522 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: SessionCount / SessionCount [Sessions  Cur: 0 Min: 2147483647 Max: -2147483648 New: 0 Del: 0]
+643 2018-07-10 10:36:43,525 [localhost-startStop-1] INFO   n.a.m.w.util.StartStopListener:27 - Initializing moskito for MoSKito Inspect
+643 2018-07-10 10:36:43,525 [localhost-startStop-1] INFO   n.a.m.w.u.SetupPreconfiguredAccumulators:27 - Configuring session accumulators.
+643 2018-07-10 10:36:43,525 [localhost-startStop-1] INFO   n.a.m.w.u.SetupPreconfiguredAccumulators:29 - Configuring url accumulators.
+866 2018-07-10 10:36:43,748 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: ActivityAPI / OnDemandProducer (unlimited): ActivityAPI:default:api
+888 2018-07-10 10:36:43,770 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: LoginAPI / OnDemandProducer (unlimited): LoginAPI:default:api
+893 2018-07-10 10:36:43,775 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: ObservationAPI / OnDemandProducer (unlimited): ObservationAPI:default:api
+900 2018-07-10 10:36:43,782 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: subjects-1 / net.anotheria.moskito.core.util.storage.Storage@427bd362
+910 2018-07-10 10:36:43,792 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: moskitoUI / net.anotheria.moskito.webui.MoskitoUIFilter@2d30a618
+957 2018-07-10 10:36:43,839 [localhost-startStop-1] INFO   n.a.m.webui.MoskitoUIFilter:151 - Initializing MoSKito WebUI...
+1101 2018-07-10 10:36:43,983 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: maffilter / net.anotheria.inspect.testing.InspectTestingFilter@2734cb66
+ConfiguredExtractors: [net.anotheria.moskito.web.filters.caseextractor.RequestURICaseExtractor, net.anotheria.moskito.web.filters.caseextractor.RefererCaseExtractor, net.anotheria.moskito.web.filters.caseextractor.MethodCaseExtractor, net.anotheria.moskito.web.filters.caseextractor.UserAgentCaseExtractor, net.anotheria.moskito.web.filters.caseextractor.DomainCaseExtractor]
+1111 2018-07-10 10:36:43,993 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: RequestURI / OnDemandProducer (limited: 100): RequestURI:default:filter (1 / 100)
+1112 2018-07-10 10:36:43,994 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: Referer / OnDemandProducer (limited: 100): Referer:default:filter (1 / 100)
+1114 2018-07-10 10:36:43,996 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: Method / OnDemandProducer (limited: 100): Method:default:filter (1 / 100)
+1115 2018-07-10 10:36:43,997 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: UserAgent / OnDemandProducer (limited: 100): UserAgent:default:filter (1 / 100)
+1116 2018-07-10 10:36:43,998 [localhost-startStop-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: Domain / OnDemandProducer (limited: 100): Domain:default:filter (1 / 100)
+10-Jul-2018 10:36:44.011 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/matheus/JCL-APP/app/src/lib/moskito/moskito-inspect/tomcat/webapps/moskito.war] has finished in [3,561] ms
+10-Jul-2018 10:36:44.014 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8088"]
+10-Jul-2018 10:36:44.048 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 3666 ms
+8898 2018-07-10 10:36:51,780 [http-nio-8088-exec-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: sessions-2 / net.anotheria.moskito.core.util.storage.Storage@2119410
+8901 2018-07-10 10:36:51,783 [http-nio-8088-exec-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: session-refIds-3 / net.anotheria.moskito.core.util.storage.Storage@697d8873
+12541 2018-07-10 10:36:55,423 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: DashboardAPI / OnDemandProducer (unlimited): DashboardAPI:default:api
+12557 2018-07-10 10:36:55,439 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: GaugeAPI / OnDemandProducer (unlimited): GaugeAPI:default:api
+12565 2018-07-10 10:36:55,447 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: ThresholdAPI / OnDemandProducer (unlimited): ThresholdAPI:default:api
+12567 2018-07-10 10:36:55,449 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryAPIImpl:251 - Producer registered: ThresholdAPI / OnDemandProducer (unlimited): ThresholdAPI:default:api
+12583 2018-07-10 10:36:55,465 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: AccumulatorAPI / OnDemandProducer (unlimited): AccumulatorAPI:default:api
+12589 2018-07-10 10:36:55,471 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryAPIImpl:251 - Producer registered: AccumulatorAPI / OnDemandProducer (unlimited): AccumulatorAPI:default:api
+12614 2018-07-10 10:36:55,496 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: ProducerAPI / OnDemandProducer (unlimited): ProducerAPI:default:api
+12615 2018-07-10 10:36:55,497 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryAPIImpl:251 - Producer registered: ProducerAPI / OnDemandProducer (unlimited): ProducerAPI:default:api
+12642 2018-07-10 10:36:55,524 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: AdditionalFunctionalityAPI / OnDemandProducer (unlimited): AdditionalFunctionalityAPI:default:api
+12643 2018-07-10 10:36:55,525 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryAPIImpl:251 - Producer registered: AdditionalFunctionalityAPI / OnDemandProducer (unlimited): AdditionalFunctionalityAPI:default:api
+62441 2018-07-10 10:37:45,323 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: TracerAPI / OnDemandProducer (unlimited): TracerAPI:default:api
+62443 2018-07-10 10:37:45,325 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryAPIImpl:251 - Producer registered: TracerAPI / OnDemandProducer (unlimited): TracerAPI:default:api
+90224 2018-07-10 10:38:13,106 [http-nio-8088-exec-3] ERROR  net.anotheria.maf.MAFFilter:284 - Unexpected exception in processing
+java.lang.IllegalStateException: Cannot connect to localhost@localhost:9401, due: Can not resolve manually set reference. Server at localhost, port: 9401 is down or not properly configured
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:216) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:189) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.getDashboardAPI(APILookupUtility.java:147) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.getDashboardAPI(BaseMoskitoUIAction.java:683) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getSelectedDashboard(BaseDashboardAction.java:61) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getLinkToCurrentPage(BaseDashboardAction.java:28) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.prepareBasics(BaseMoskitoUIAction.java:374) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.preProcess(BaseMoskitoUIAction.java:462) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.preProcess(BaseDashboardAction.java:36) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.maf.MAFFilter.doPerform(MAFFilter.java:262) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.maf.MAFFilter.doFilter(MAFFilter.java:217) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.moskito.webui.MoskitoUIFilter.doFilter(MoskitoUIFilter.java:145) [moskito-webui-2.8.7.jar:2.8.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at net.anotheria.anoplass.api.filter.APIFilter.doFilter(APIFilter.java:107) [ano-plass-2.1.1.jar:2.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:209) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 33 common frames omitted
+Caused by: java.lang.IllegalStateException: Can not resolve manually set reference
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:107) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: org.distributeme.core.exception.NoConnectionToServerException: Can't lookup service in the target rmi registry for an instance of rmi://net_anotheria_moskito_webui_dashboards_api_DashboardAPI.any@localhost:9401@20180710103813
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2458) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:105) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.8.0_171]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[na:1.8.0_171]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2455) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 39 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.8.0_171]
+	... 44 common frames omitted
+120283 2018-07-10 10:38:43,165 [http-nio-8088-exec-4] ERROR  net.anotheria.maf.MAFFilter:284 - Unexpected exception in processing
+java.lang.IllegalStateException: Cannot connect to localhost@localhost:9401, due: Can not resolve manually set reference. Server at localhost, port: 9401 is down or not properly configured
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:216) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:189) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.getAdditionalFunctionalityAPI(APILookupUtility.java:135) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.preProcess(BaseMoskitoUIAction.java:485) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.preProcess(BaseDashboardAction.java:36) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.maf.MAFFilter.doPerform(MAFFilter.java:262) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.maf.MAFFilter.doFilter(MAFFilter.java:217) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.moskito.webui.MoskitoUIFilter.doFilter(MoskitoUIFilter.java:145) [moskito-webui-2.8.7.jar:2.8.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at net.anotheria.anoplass.api.filter.APIFilter.doFilter(APIFilter.java:107) [ano-plass-2.1.1.jar:2.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:209) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 29 common frames omitted
+Caused by: java.lang.IllegalStateException: Can not resolve manually set reference
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.<init>(RemoteAdditionalFunctionalityAPIStub.java:97) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 34 common frames omitted
+Caused by: org.distributeme.core.exception.NoConnectionToServerException: Can't lookup service in the target rmi registry for an instance of rmi://net_anotheria_moskito_webui_shared_api_AdditionalFunctionalityAPI.any@localhost:9401@20180710103843
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.lookup(RemoteAdditionalFunctionalityAPIStub.java:1797) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.<init>(RemoteAdditionalFunctionalityAPIStub.java:95) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 34 common frames omitted
+Caused by: java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.8.0_171]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[na:1.8.0_171]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.lookup(RemoteAdditionalFunctionalityAPIStub.java:1794) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 35 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.8.0_171]
+	... 40 common frames omitted
+130005 2018-07-10 10:38:52,887 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: ThreadAPI / OnDemandProducer (unlimited): ThreadAPI:default:api
+130006 2018-07-10 10:38:52,888 [http-nio-8088-exec-9] INFO   n.a.m.c.r.ProducerRegistryAPIImpl:251 - Producer registered: ThreadAPI / OnDemandProducer (unlimited): ThreadAPI:default:api
+190540 2018-07-10 10:39:53,422 [http-nio-8088-exec-10] ERROR  net.anotheria.maf.MAFFilter:284 - Unexpected exception in processing
+java.lang.IllegalStateException: Cannot connect to localhost@localhost:9401, due: Can not resolve manually set reference. Server at localhost, port: 9401 is down or not properly configured
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:216) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:189) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.getDashboardAPI(APILookupUtility.java:147) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.getDashboardAPI(BaseMoskitoUIAction.java:683) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getSelectedDashboard(BaseDashboardAction.java:61) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getLinkToCurrentPage(BaseDashboardAction.java:28) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.prepareBasics(BaseMoskitoUIAction.java:374) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.preProcess(BaseMoskitoUIAction.java:462) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.preProcess(BaseDashboardAction.java:36) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.maf.MAFFilter.doPerform(MAFFilter.java:262) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.maf.MAFFilter.doFilter(MAFFilter.java:217) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.moskito.webui.MoskitoUIFilter.doFilter(MoskitoUIFilter.java:145) [moskito-webui-2.8.7.jar:2.8.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at net.anotheria.anoplass.api.filter.APIFilter.doFilter(APIFilter.java:107) [ano-plass-2.1.1.jar:2.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:209) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 33 common frames omitted
+Caused by: java.lang.IllegalStateException: Can not resolve manually set reference
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:107) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: org.distributeme.core.exception.NoConnectionToServerException: Can't lookup service in the target rmi registry for an instance of rmi://net_anotheria_moskito_webui_dashboards_api_DashboardAPI.any@localhost:9401@20180710103953
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2458) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:105) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.8.0_171]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[na:1.8.0_171]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2455) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 39 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.8.0_171]
+	... 44 common frames omitted
+10-Jul-2018 10:42:19.505 INFO [http-nio-8088-exec-6] com.sun.jersey.api.core.PackagesResourceConfig.init Scanning for root resource and provider classes in the packages:
+  net.anotheria.moskito.webui
+10-Jul-2018 10:42:19.706 INFO [http-nio-8088-exec-6] com.sun.jersey.api.core.ScanningResourceConfig.logClasses Root resource classes found:
+  class net.anotheria.moskito.webui.producers.resource.ProducerResource
+  class net.anotheria.moskito.webui.journey.resource.JourneyResource
+  class net.anotheria.moskito.webui.threshold.resource.StatusResource
+  class net.anotheria.moskito.webui.accumulators.resource.AccumulatorResource
+  class net.anotheria.moskito.webui.threshold.resource.ThresholdResource
+  class net.anotheria.moskito.webui.gauges.resource.GaugeResource
+  class net.anotheria.moskito.webui.shared.resource.VersionResource
+  class net.anotheria.moskito.webui.threshold.resource.AlertsResource
+  class net.anotheria.moskito.webui.dashboards.resource.DashboardResource
+10-Jul-2018 10:42:19.706 INFO [http-nio-8088-exec-6] com.sun.jersey.api.core.ScanningResourceConfig.logClasses Provider classes found:
+  class net.anotheria.moskito.webui.shared.resource.ReplyObjectWriter
+10-Jul-2018 10:42:19.809 INFO [http-nio-8088-exec-6] com.sun.jersey.server.impl.application.WebApplicationImpl._initiate Initiating Jersey application, version 'Jersey: 1.18.1 02/19/2014 03:28 AM'
+1212187 2018-07-10 10:56:55,069 [http-nio-8088-exec-5] ERROR  net.anotheria.maf.MAFFilter:284 - Unexpected exception in processing
+java.lang.IllegalStateException: Cannot connect to localhost@localhost:9401, due: Can not resolve manually set reference. Server at localhost, port: 9401 is down or not properly configured
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:216) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:189) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.getDashboardAPI(APILookupUtility.java:147) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.getDashboardAPI(BaseMoskitoUIAction.java:683) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getSelectedDashboard(BaseDashboardAction.java:61) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getLinkToCurrentPage(BaseDashboardAction.java:28) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.prepareBasics(BaseMoskitoUIAction.java:374) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.preProcess(BaseMoskitoUIAction.java:462) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.preProcess(BaseDashboardAction.java:36) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.maf.MAFFilter.doPerform(MAFFilter.java:262) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.maf.MAFFilter.doFilter(MAFFilter.java:217) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.moskito.webui.MoskitoUIFilter.doFilter(MoskitoUIFilter.java:145) [moskito-webui-2.8.7.jar:2.8.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at net.anotheria.anoplass.api.filter.APIFilter.doFilter(APIFilter.java:107) [ano-plass-2.1.1.jar:2.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:209) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 33 common frames omitted
+Caused by: java.lang.IllegalStateException: Can not resolve manually set reference
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:107) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: org.distributeme.core.exception.NoConnectionToServerException: Can't lookup service in the target rmi registry for an instance of rmi://net_anotheria_moskito_webui_dashboards_api_DashboardAPI.any@localhost:9401@20180710105655
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2458) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:105) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.8.0_171]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[na:1.8.0_171]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2455) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 39 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.8.0_171]
+	... 44 common frames omitted
+1297801 2018-07-10 10:58:20,683 [http-nio-8088-exec-4] ERROR  net.anotheria.maf.MAFFilter:284 - Unexpected exception in processing
+java.lang.IllegalStateException: Cannot connect to localhost@localhost:9401, due: Can not resolve manually set reference. Server at localhost, port: 9401 is down or not properly configured
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:216) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:189) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.getAdditionalFunctionalityAPI(APILookupUtility.java:135) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.preProcess(BaseMoskitoUIAction.java:485) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.preProcess(BaseDashboardAction.java:36) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.maf.MAFFilter.doPerform(MAFFilter.java:262) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.maf.MAFFilter.doFilter(MAFFilter.java:217) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.moskito.webui.MoskitoUIFilter.doFilter(MoskitoUIFilter.java:145) [moskito-webui-2.8.7.jar:2.8.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at net.anotheria.anoplass.api.filter.APIFilter.doFilter(APIFilter.java:107) [ano-plass-2.1.1.jar:2.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:209) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 29 common frames omitted
+Caused by: java.lang.IllegalStateException: Can not resolve manually set reference
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.<init>(RemoteAdditionalFunctionalityAPIStub.java:97) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 34 common frames omitted
+Caused by: org.distributeme.core.exception.NoConnectionToServerException: Can't lookup service in the target rmi registry for an instance of rmi://net_anotheria_moskito_webui_shared_api_AdditionalFunctionalityAPI.any@localhost:9401@20180710105820
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.lookup(RemoteAdditionalFunctionalityAPIStub.java:1797) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.<init>(RemoteAdditionalFunctionalityAPIStub.java:95) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 34 common frames omitted
+Caused by: java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.8.0_171]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[na:1.8.0_171]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.lookup(RemoteAdditionalFunctionalityAPIStub.java:1794) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 35 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.8.0_171]
+	... 40 common frames omitted
+1379461 2018-07-10 10:59:42,343 [http-nio-8088-exec-1] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: TagAPI / OnDemandProducer (unlimited): TagAPI:default:api
+1379462 2018-07-10 10:59:42,344 [http-nio-8088-exec-1] INFO   n.a.m.c.r.ProducerRegistryAPIImpl:251 - Producer registered: TagAPI / OnDemandProducer (unlimited): TagAPI:default:api
+1732550 2018-07-10 11:05:35,432 [http-nio-8088-exec-4] ERROR  net.anotheria.maf.MAFFilter:284 - Unexpected exception in processing
+java.lang.IllegalStateException: Cannot connect to Burgershop Local@localhost:9401, due: Can not resolve manually set reference. Server at localhost, port: 9401 is down or not properly configured
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:216) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:189) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.getDashboardAPI(APILookupUtility.java:147) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.getDashboardAPI(BaseMoskitoUIAction.java:683) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getSelectedDashboard(BaseDashboardAction.java:61) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getLinkToCurrentPage(BaseDashboardAction.java:28) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.prepareBasics(BaseMoskitoUIAction.java:374) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.preProcess(BaseMoskitoUIAction.java:462) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.preProcess(BaseDashboardAction.java:36) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.maf.MAFFilter.doPerform(MAFFilter.java:262) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.maf.MAFFilter.doFilter(MAFFilter.java:217) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.moskito.webui.MoskitoUIFilter.doFilter(MoskitoUIFilter.java:145) [moskito-webui-2.8.7.jar:2.8.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at net.anotheria.anoplass.api.filter.APIFilter.doFilter(APIFilter.java:107) [ano-plass-2.1.1.jar:2.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:209) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 33 common frames omitted
+Caused by: java.lang.IllegalStateException: Can not resolve manually set reference
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:107) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: org.distributeme.core.exception.NoConnectionToServerException: Can't lookup service in the target rmi registry for an instance of rmi://net_anotheria_moskito_webui_dashboards_api_DashboardAPI.any@localhost:9401@20180710110535
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2458) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:105) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.8.0_171]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[na:1.8.0_171]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2455) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 39 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.8.0_171]
+	... 44 common frames omitted
+1774026 2018-07-10 11:06:16,908 [http-nio-8088-exec-7] INFO   n.a.m.c.r.ProducerRegistryImpl:121 - Registry register producer: JourneyAPI / OnDemandProducer (unlimited): JourneyAPI:default:api
+1774027 2018-07-10 11:06:16,909 [http-nio-8088-exec-7] INFO   n.a.m.c.r.ProducerRegistryAPIImpl:251 - Producer registered: JourneyAPI / OnDemandProducer (unlimited): JourneyAPI:default:api
+2265633 2018-07-10 11:14:28,515 [http-nio-8088-exec-5] ERROR  net.anotheria.maf.MAFFilter:284 - Unexpected exception in processing
+java.lang.IllegalStateException: Cannot connect to Another Test Server@test1.example.com:9402, due: Can not resolve manually set reference. Server at test1.example.com, port: 9402 is down or not properly configured
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:216) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:189) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.getDashboardAPI(APILookupUtility.java:147) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.getDashboardAPI(BaseMoskitoUIAction.java:683) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getSelectedDashboard(BaseDashboardAction.java:61) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getLinkToCurrentPage(BaseDashboardAction.java:28) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.prepareBasics(BaseMoskitoUIAction.java:374) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.preProcess(BaseMoskitoUIAction.java:462) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.preProcess(BaseDashboardAction.java:36) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.maf.MAFFilter.doPerform(MAFFilter.java:262) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.maf.MAFFilter.doFilter(MAFFilter.java:217) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.moskito.webui.MoskitoUIFilter.doFilter(MoskitoUIFilter.java:145) [moskito-webui-2.8.7.jar:2.8.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at net.anotheria.anoplass.api.filter.APIFilter.doFilter(APIFilter.java:107) [ano-plass-2.1.1.jar:2.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:209) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 33 common frames omitted
+Caused by: java.lang.IllegalStateException: Can not resolve manually set reference
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:107) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: org.distributeme.core.exception.NoConnectionToServerException: Can't lookup service in the target rmi registry for an instance of rmi://net_anotheria_moskito_webui_dashboards_api_DashboardAPI.any@test1.example.com:9402@20180710111428
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2458) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:105) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: java.rmi.UnknownHostException: Unknown host: test1.example.com; nested exception is: 
+	java.net.UnknownHostException: test1.example.com
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:616) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.8.0_171]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[na:1.8.0_171]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2455) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 39 common frames omitted
+Caused by: java.net.UnknownHostException: test1.example.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.8.0_171]
+	... 44 common frames omitted
+3010480 2018-07-10 11:26:53,362 [http-nio-8088-exec-10] ERROR  net.anotheria.maf.MAFFilter:284 - Unexpected exception in processing
+java.lang.IllegalStateException: Cannot connect to localhost@localhost:9401, due: Can not resolve manually set reference. Server at localhost, port: 9401 is down or not properly configured
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:216) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:189) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.getDashboardAPI(APILookupUtility.java:147) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.getDashboardAPI(BaseMoskitoUIAction.java:683) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getSelectedDashboard(BaseDashboardAction.java:61) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getLinkToCurrentPage(BaseDashboardAction.java:28) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.prepareBasics(BaseMoskitoUIAction.java:374) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.preProcess(BaseMoskitoUIAction.java:462) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.preProcess(BaseDashboardAction.java:36) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.maf.MAFFilter.doPerform(MAFFilter.java:262) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.maf.MAFFilter.doFilter(MAFFilter.java:217) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.moskito.webui.MoskitoUIFilter.doFilter(MoskitoUIFilter.java:145) [moskito-webui-2.8.7.jar:2.8.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at net.anotheria.anoplass.api.filter.APIFilter.doFilter(APIFilter.java:107) [ano-plass-2.1.1.jar:2.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:209) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 33 common frames omitted
+Caused by: java.lang.IllegalStateException: Can not resolve manually set reference
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:107) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: org.distributeme.core.exception.NoConnectionToServerException: Can't lookup service in the target rmi registry for an instance of rmi://net_anotheria_moskito_webui_dashboards_api_DashboardAPI.any@localhost:9401@20180710112653
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2458) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:105) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.8.0_171]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[na:1.8.0_171]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2455) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 39 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.8.0_171]
+	... 44 common frames omitted
+3018532 2018-07-10 11:27:01,414 [http-nio-8088-exec-6] ERROR  net.anotheria.maf.MAFFilter:284 - Unexpected exception in processing
+java.lang.IllegalStateException: Cannot connect to localhost@localhost:9401, due: Can not resolve manually set reference. Server at localhost, port: 9401 is down or not properly configured
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:216) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:189) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.getAdditionalFunctionalityAPI(APILookupUtility.java:135) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.preProcess(BaseMoskitoUIAction.java:485) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.preProcess(BaseDashboardAction.java:36) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.maf.MAFFilter.doPerform(MAFFilter.java:262) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.maf.MAFFilter.doFilter(MAFFilter.java:217) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.moskito.webui.MoskitoUIFilter.doFilter(MoskitoUIFilter.java:145) [moskito-webui-2.8.7.jar:2.8.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at net.anotheria.anoplass.api.filter.APIFilter.doFilter(APIFilter.java:107) [ano-plass-2.1.1.jar:2.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:209) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 29 common frames omitted
+Caused by: java.lang.IllegalStateException: Can not resolve manually set reference
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.<init>(RemoteAdditionalFunctionalityAPIStub.java:97) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 34 common frames omitted
+Caused by: org.distributeme.core.exception.NoConnectionToServerException: Can't lookup service in the target rmi registry for an instance of rmi://net_anotheria_moskito_webui_shared_api_AdditionalFunctionalityAPI.any@localhost:9401@20180710112701
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.lookup(RemoteAdditionalFunctionalityAPIStub.java:1797) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.<init>(RemoteAdditionalFunctionalityAPIStub.java:95) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 34 common frames omitted
+Caused by: java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused (Connection refused)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.8.0_171]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[na:1.8.0_171]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.shared.api.generated.RemoteAdditionalFunctionalityAPIStub.lookup(RemoteAdditionalFunctionalityAPIStub.java:1794) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 35 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.8.0_171]
+	... 40 common frames omitted
+3029246 2018-07-10 11:27:12,128 [http-nio-8088-exec-3] ERROR  net.anotheria.maf.MAFFilter:284 - Unexpected exception in processing
+java.lang.IllegalStateException: Cannot connect to TestServer@test1.example.com:9401, due: Can not resolve manually set reference. Server at test1.example.com, port: 9401 is down or not properly configured
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:216) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:189) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.util.APILookupUtility.getDashboardAPI(APILookupUtility.java:147) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.getDashboardAPI(BaseMoskitoUIAction.java:683) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getSelectedDashboard(BaseDashboardAction.java:61) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.getLinkToCurrentPage(BaseDashboardAction.java:28) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.prepareBasics(BaseMoskitoUIAction.java:374) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.shared.action.BaseMoskitoUIAction.preProcess(BaseMoskitoUIAction.java:462) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.action.BaseDashboardAction.preProcess(BaseDashboardAction.java:36) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.maf.MAFFilter.doPerform(MAFFilter.java:262) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.maf.MAFFilter.doFilter(MAFFilter.java:217) [ano-maf-2.2.0.jar:2.2.0]
+	at net.anotheria.moskito.webui.MoskitoUIFilter.doFilter(MoskitoUIFilter.java:145) [moskito-webui-2.8.7.jar:2.8.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at net.anotheria.anoplass.api.filter.APIFilter.doFilter(APIFilter.java:107) [ano-plass-2.1.1.jar:2.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [catalina.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [catalina.jar:8.5.16]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624) [catalina.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [catalina.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-coyote.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-coyote.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_171]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_171]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_171]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.util.APILookupUtility.findRemote(APILookupUtility.java:209) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 33 common frames omitted
+Caused by: java.lang.IllegalStateException: Can not resolve manually set reference
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:107) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: org.distributeme.core.exception.NoConnectionToServerException: Can't lookup service in the target rmi registry for an instance of rmi://net_anotheria_moskito_webui_dashboards_api_DashboardAPI.any@test1.example.com:9401@20180710112712
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2458) ~[moskito-webui-2.8.7.jar:2.8.7]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.<init>(RemoteDashboardAPIStub.java:105) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 38 common frames omitted
+Caused by: java.rmi.UnknownHostException: Unknown host: test1.example.com; nested exception is: 
+	java.net.UnknownHostException: test1.example.com
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:616) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[na:1.8.0_171]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[na:1.8.0_171]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[na:1.8.0_171]
+	at net.anotheria.moskito.webui.dashboards.api.generated.RemoteDashboardAPIStub.lookup(RemoteDashboardAPIStub.java:2455) ~[moskito-webui-2.8.7.jar:2.8.7]
+	... 39 common frames omitted
+Caused by: java.net.UnknownHostException: test1.example.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0_171]
+	at java.net.Socket.<init>(Socket.java:211) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[na:1.8.0_171]
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[na:1.8.0_171]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[na:1.8.0_171]
+	... 44 common frames omitted
+11-Jul-2018 18:34:46.035 INFO [Thread-7] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8088"]
+11-Jul-2018 18:34:46.038 INFO [Thread-7] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+115083175 2018-07-11 18:34:46,057 [localhost-startStop-2] INFO   n.a.m.w.util.StartStopListener:33 - Deinitializing moskito for MoSKito Inspect
+11-Jul-2018 18:34:46.097 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [moskito] appears to have started a thread named [Thread-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Thread.sleep(Native Method)
+ org.configureme.sources.ConfigurationSourceRegistry$WatcherThread.run(ConfigurationSourceRegistry.java:170)
+11-Jul-2018 18:34:46.098 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [moskito] appears to have started a thread named [pool-2-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+11-Jul-2018 18:34:46.098 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [moskito] appears to have started a thread named [AlertDispatcherThread-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+11-Jul-2018 18:34:46.101 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1] (value [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1@2b310254]) and a value of type [net.anotheria.moskito.core.calltrace.NoTracedCall] (value [NoTracedCall]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.106 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.anoplass.api.APICallContext$1] (value [net.anotheria.anoplass.api.APICallContext$1@3a2bf03]) and a value of type [net.anotheria.anoplass.api.APICallContext] (value [User: guest session: Id: lqqrdvtxjvzfcbgihhcgjntdcypost, attributes: 1, locale: pt_BR, serverName: , scope contains 0 elements.]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.107 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.webui.MoSKitoWebUIContext$1] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext$1@1dee1349]) and a value of type [net.anotheria.moskito.webui.MoSKitoWebUIContext] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext@307213d9]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.107 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.maf.MAFExecutionContext$1] (value [net.anotheria.maf.MAFExecutionContext$1@13f29421]) and a value of type [net.anotheria.maf.MAFExecutionContext] (value [net.anotheria.maf.MAFExecutionContext@53e7bfb]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.107 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1] (value [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1@2b310254]) and a value of type [net.anotheria.moskito.core.calltrace.NoTracedCall] (value [NoTracedCall]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.107 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.anoplass.api.APICallContext$1] (value [net.anotheria.anoplass.api.APICallContext$1@3a2bf03]) and a value of type [net.anotheria.anoplass.api.APICallContext] (value [User: guest session: Id: lqqrdvtxjvzfcbgihhcgjntdcypost, attributes: 1, locale: pt_BR, serverName: , scope contains 0 elements.]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.107 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.webui.MoSKitoWebUIContext$1] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext$1@1dee1349]) and a value of type [net.anotheria.moskito.webui.MoSKitoWebUIContext] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext@6827544e]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.107 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.maf.MAFExecutionContext$1] (value [net.anotheria.maf.MAFExecutionContext$1@13f29421]) and a value of type [net.anotheria.maf.MAFExecutionContext] (value [net.anotheria.maf.MAFExecutionContext@486b6e48]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.108 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1] (value [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1@2b310254]) and a value of type [net.anotheria.moskito.core.calltrace.NoTracedCall] (value [NoTracedCall]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.108 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.anoplass.api.APICallContext$1] (value [net.anotheria.anoplass.api.APICallContext$1@3a2bf03]) and a value of type [net.anotheria.anoplass.api.APICallContext] (value [User: guest session: Id: lqqrdvtxjvzfcbgihhcgjntdcypost, attributes: 1, locale: pt_BR, serverName: , scope contains 0 elements.]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.108 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.webui.MoSKitoWebUIContext$1] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext$1@1dee1349]) and a value of type [net.anotheria.moskito.webui.MoSKitoWebUIContext] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext@4f3fb8f8]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.108 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.context.MoSKitoContext$1] (value [net.anotheria.moskito.core.context.MoSKitoContext$1@3928e347]) and a value of type [net.anotheria.moskito.core.context.MoSKitoContext] (value [net.anotheria.moskito.core.context.MoSKitoContext@6bff4508]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.108 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.maf.MAFExecutionContext$1] (value [net.anotheria.maf.MAFExecutionContext$1@13f29421]) and a value of type [net.anotheria.maf.MAFExecutionContext] (value [net.anotheria.maf.MAFExecutionContext@78757f11]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.108 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1] (value [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1@2b310254]) and a value of type [net.anotheria.moskito.core.calltrace.NoTracedCall] (value [NoTracedCall]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.113 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.anoplass.api.APICallContext$1] (value [net.anotheria.anoplass.api.APICallContext$1@3a2bf03]) and a value of type [net.anotheria.anoplass.api.APICallContext] (value [User: guest session: Id: lqqrdvtxjvzfcbgihhcgjntdcypost, attributes: 1, locale: pt_BR, serverName: , scope contains 0 elements.]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.114 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.webui.MoSKitoWebUIContext$1] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext$1@1dee1349]) and a value of type [net.anotheria.moskito.webui.MoSKitoWebUIContext] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext@4abfe09f]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.114 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.context.MoSKitoContext$1] (value [net.anotheria.moskito.core.context.MoSKitoContext$1@3928e347]) and a value of type [net.anotheria.moskito.core.context.MoSKitoContext] (value [net.anotheria.moskito.core.context.MoSKitoContext@34f31054]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.114 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.maf.MAFExecutionContext$1] (value [net.anotheria.maf.MAFExecutionContext$1@13f29421]) and a value of type [net.anotheria.maf.MAFExecutionContext] (value [net.anotheria.maf.MAFExecutionContext@25b5d4c7]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.115 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1] (value [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1@2b310254]) and a value of type [net.anotheria.moskito.core.calltrace.NoTracedCall] (value [NoTracedCall]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.115 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.anoplass.api.APICallContext$1] (value [net.anotheria.anoplass.api.APICallContext$1@3a2bf03]) and a value of type [net.anotheria.anoplass.api.APICallContext] (value [User: guest session: Id: lqqrdvtxjvzfcbgihhcgjntdcypost, attributes: 1, locale: pt_BR, serverName: , scope contains 0 elements.]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.115 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.webui.MoSKitoWebUIContext$1] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext$1@1dee1349]) and a value of type [net.anotheria.moskito.webui.MoSKitoWebUIContext] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext@43e507dd]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.115 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.context.MoSKitoContext$1] (value [net.anotheria.moskito.core.context.MoSKitoContext$1@3928e347]) and a value of type [net.anotheria.moskito.core.context.MoSKitoContext] (value [net.anotheria.moskito.core.context.MoSKitoContext@6fb8ce45]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.116 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.maf.MAFExecutionContext$1] (value [net.anotheria.maf.MAFExecutionContext$1@13f29421]) and a value of type [net.anotheria.maf.MAFExecutionContext] (value [net.anotheria.maf.MAFExecutionContext@64203c99]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.116 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1] (value [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1@2b310254]) and a value of type [net.anotheria.moskito.core.calltrace.NoTracedCall] (value [NoTracedCall]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.116 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.anoplass.api.APICallContext$1] (value [net.anotheria.anoplass.api.APICallContext$1@3a2bf03]) and a value of type [net.anotheria.anoplass.api.APICallContext] (value [User: guest session: Id: lqqrdvtxjvzfcbgihhcgjntdcypost, attributes: 1, locale: pt_BR, serverName: , scope contains 0 elements.]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.116 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.webui.MoSKitoWebUIContext$1] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext$1@1dee1349]) and a value of type [net.anotheria.moskito.webui.MoSKitoWebUIContext] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext@de7187f]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.116 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.maf.MAFExecutionContext$1] (value [net.anotheria.maf.MAFExecutionContext$1@13f29421]) and a value of type [net.anotheria.maf.MAFExecutionContext] (value [net.anotheria.maf.MAFExecutionContext@68c629ae]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.116 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1] (value [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1@2b310254]) and a value of type [net.anotheria.moskito.core.calltrace.NoTracedCall] (value [NoTracedCall]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.119 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.anoplass.api.APICallContext$1] (value [net.anotheria.anoplass.api.APICallContext$1@3a2bf03]) and a value of type [net.anotheria.anoplass.api.APICallContext] (value [User: guest session: Id: lqqrdvtxjvzfcbgihhcgjntdcypost, attributes: 1, locale: pt_BR, serverName: , scope contains 0 elements.]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.120 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.webui.MoSKitoWebUIContext$1] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext$1@1dee1349]) and a value of type [net.anotheria.moskito.webui.MoSKitoWebUIContext] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext@7f1a1e3]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.121 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.maf.MAFExecutionContext$1] (value [net.anotheria.maf.MAFExecutionContext$1@13f29421]) and a value of type [net.anotheria.maf.MAFExecutionContext] (value [net.anotheria.maf.MAFExecutionContext@2f27711]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.121 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1] (value [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1@2b310254]) and a value of type [net.anotheria.moskito.core.calltrace.NoTracedCall] (value [NoTracedCall]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.121 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.anoplass.api.APICallContext$1] (value [net.anotheria.anoplass.api.APICallContext$1@3a2bf03]) and a value of type [net.anotheria.anoplass.api.APICallContext] (value [User: guest session: Id: lqqrdvtxjvzfcbgihhcgjntdcypost, attributes: 1, locale: pt_BR, serverName: , scope contains 0 elements.]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.121 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.webui.MoSKitoWebUIContext$1] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext$1@1dee1349]) and a value of type [net.anotheria.moskito.webui.MoSKitoWebUIContext] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext@37e3b3d0]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.121 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.maf.MAFExecutionContext$1] (value [net.anotheria.maf.MAFExecutionContext$1@13f29421]) and a value of type [net.anotheria.maf.MAFExecutionContext] (value [net.anotheria.maf.MAFExecutionContext@6eb167db]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.122 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1] (value [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1@2b310254]) and a value of type [net.anotheria.moskito.core.calltrace.NoTracedCall] (value [NoTracedCall]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.122 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.anoplass.api.APICallContext$1] (value [net.anotheria.anoplass.api.APICallContext$1@3a2bf03]) and a value of type [net.anotheria.anoplass.api.APICallContext] (value [User: guest session: Id: lqqrdvtxjvzfcbgihhcgjntdcypost, attributes: 1, locale: pt_BR, serverName: , scope contains 0 elements.]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.122 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.webui.MoSKitoWebUIContext$1] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext$1@1dee1349]) and a value of type [net.anotheria.moskito.webui.MoSKitoWebUIContext] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext@64453d57]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.122 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.maf.MAFExecutionContext$1] (value [net.anotheria.maf.MAFExecutionContext$1@13f29421]) and a value of type [net.anotheria.maf.MAFExecutionContext] (value [net.anotheria.maf.MAFExecutionContext@759e9431]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.122 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1] (value [net.anotheria.moskito.core.calltrace.RunningTraceContainer$1@2b310254]) and a value of type [net.anotheria.moskito.core.calltrace.NoTracedCall] (value [NoTracedCall]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.122 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.anoplass.api.APICallContext$1] (value [net.anotheria.anoplass.api.APICallContext$1@3a2bf03]) and a value of type [net.anotheria.anoplass.api.APICallContext] (value [User: guest session: Id: lqqrdvtxjvzfcbgihhcgjntdcypost, attributes: 1, locale: pt_BR, serverName: , scope contains 0 elements.]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.123 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.webui.MoSKitoWebUIContext$1] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext$1@1dee1349]) and a value of type [net.anotheria.moskito.webui.MoSKitoWebUIContext] (value [net.anotheria.moskito.webui.MoSKitoWebUIContext@5fc9d461]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.123 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.moskito.core.context.MoSKitoContext$1] (value [net.anotheria.moskito.core.context.MoSKitoContext$1@3928e347]) and a value of type [net.anotheria.moskito.core.context.MoSKitoContext] (value [net.anotheria.moskito.core.context.MoSKitoContext@3a23effc]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.126 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [moskito] created a ThreadLocal with key of type [net.anotheria.maf.MAFExecutionContext$1] (value [net.anotheria.maf.MAFExecutionContext$1@13f29421]) and a value of type [net.anotheria.maf.MAFExecutionContext] (value [net.anotheria.maf.MAFExecutionContext@7741c26a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+11-Jul-2018 18:34:46.131 INFO [Thread-7] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8088"]
+11-Jul-2018 18:34:46.133 INFO [Thread-7] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8088"]

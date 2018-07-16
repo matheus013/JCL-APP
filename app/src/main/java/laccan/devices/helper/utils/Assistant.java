@@ -32,6 +32,7 @@ public class Assistant {
      *
      * @param message mensagem recebida
      */
+    @Deprecated
     public static void toFog(Message message) {
         MicazMsg micazTemp = (MicazMsg) message;
         Sample sample = new Sample(micazTemp);

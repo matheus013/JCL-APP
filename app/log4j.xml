@@ -1,0 +1,28 @@
+<!-- Moskito LOGGER DECLARATION START -->
+
+<logger name="MoskitoDefault" additivity="false">
+    <level value="INFO"/>
+    <appender-ref ref="MoskitoDefaultFileAppender"/>
+</logger>
+
+<logger name="Moskito5m" additivity="false">
+<level value="INFO"/>
+<appender-ref ref="Moskito5mFileAppender"/>
+</logger>
+
+<logger name="Moskito15m" additivity="false">
+<level value="INFO"/>
+<appender-ref ref="Moskito15mFileAppender"/>
+</logger>
+
+<logger name="Moskito1h" additivity="false">
+<level value="INFO"/>
+<appender-ref ref="Moskito1hFileAppender"/>
+</logger>
+
+<logger name="Moskito1d" additivity="false">
+<level value="INFO"/>
+<appender-ref ref="Moskito1dFileAppender"/>
+</logger>
+
+        <!-- /Moskito LOGGER DECLARATION END -->

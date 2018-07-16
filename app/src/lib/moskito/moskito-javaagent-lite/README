@@ -1,0 +1,28 @@
+To add an agent to a Java VM to monitor basic JVM Parameters add following properties to the startup script of your application:
+-javaagent:<moskito-folder>moskito-javaagent-lite-2.8.7.jar -DmoskitoAgentPort=<port>
+
+For example for your tomcat, it would be following lines in your startup.sh:
+export JAVA_OPTS=" $JAVA_OPTS -DmoskitoAgentPort=9415"
+export JAVA_OPTS=" $JAVA_OPTS -javaagent:/opt/moskito-javaagent-lite/moskito-javaagent-lite-2.8.7.jar"
+
+To add this monitored JVM to your MoSKito Control Instance, use following declaration:
+{
+     "name": "your-server-name",
+     "category": "your-category",
+     "connectorType": "RMI",
+     "location": "<ip>:<port>"
+ },
+
+Note: If you want to run the agent on one VM (servervm) and moskito control on another:
+you can use the hostname of the servervm , but ensure that your servervm resolves to the ip the host is available under. 
+For example if you have following line as first line in your servervms /etc/hosts
+BAD:
+127.0.0.1       localhost	yourservername
+
+This won't resolve yourservername from another machine, and the code running on your server will bind itself to 127.0.0.1 and won't be accessable from outside.
+If your ip is (for example) 192.168.178.34 your /etc/hosts should look like this:
+GOOD EXAMPLE:
+192.168.178.34  yourservername yourservername.local yourservername.yourorganisation.tld
+127.0.0.1       localhost	
+
+Refer to MoSKito Control Configuration Guide for further details.

@@ -6,6 +6,7 @@ public class Sample {
     protected long date;
     protected Type type;
 
+    @Deprecated
     public Sample(MicazMsg micaz) {
         double sum = 0;
         for (int i = 0; i < micaz.get_Buffer().length; i++) {
@@ -14,6 +15,7 @@ public class Sample {
         this.temperature = sum / 20;
     }
 
+    @Deprecated
     public Sample(MicazMsg micaz, long date) {
         double sum = 0;
         for (int i = 0; i < micaz.get_Buffer().length; i++) {
@@ -76,5 +78,9 @@ public class Sample {
     @Override
     public String toString() {
         return node + ";" + String.valueOf(temperature) + ";" + String.valueOf(date);
+    }
+
+    public String toJson() {
+        return "json";
     }
 }

@@ -1,0 +1,22 @@
+Bellow you will find a standard tomcat (8) with MoSKito Inspect Webapp installed.
+To RUN it:
+cd tomcat
+bin/startup.sh
+
+To STOP it:
+cd tomcat
+bin/shutdown.sh
+
+Access your MoSKito Console:
+http://localhost:8088/moskito
+
+Upgrading tomcat:
+Just replace the contents of the tomcat folder and run relink.sh
+
+Upgrading MoSKito:
+Download the version you want to upgrade to from maven:
+http://search.maven.org/#search%7Cga%7C1%7Cmoskito-inspect-standalone
+Edit relink.sh and update VERSION field. 
+Run relink.sh
+
+

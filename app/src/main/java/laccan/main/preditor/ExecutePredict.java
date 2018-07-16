@@ -15,6 +15,10 @@ public class ExecutePredict {
         regression = new Regression();
     }
 
+    public boolean loadSets(List<Sample> input){
+        return input != null && test != null;
+    }
+
     public boolean loadSets(String training, String test) {
         StorageCSV storageCSV = new StorageCSV();
         this.input = storageCSV.local(training).read();

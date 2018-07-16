@@ -9,8 +9,8 @@
  * @author: Geymerson Ramos
  * @email: geymerson@laccan.ufal.br
  * Last-Updated:
- *           By: Geymerson Ramos
- *     Update #: 2017
+ *           By: Matheus Inácio
+ *     Update #: 2018
  */
 
 /* Change Log:
@@ -33,7 +33,7 @@ typedef nx_struct micazMsg {
   nx_uint16_t NodeID;
   nx_uint16_t Voltage;
   /* nx_int16_t Buffer[15]; */
-  nx_int16_t Buffer[PERIODICITY_MULTIPLIER];
+  nx_int16_t Buffer[10];
 } MicazMsg;
 
 #endif

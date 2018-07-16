@@ -16,6 +16,46 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>aspectj-maven-plugin</artifactId>
+                <version>${aspectj-maven-plugin.version}</version>
+                <configuration>
+                    <complianceLevel>${aspectj-maven-plugin.complianceLevel}</complianceLevel>
+                    <source>${source-version}</source>
+                    <target>${target-version}</target>
+                    <aspectLibraries>
+                        <aspectLibrary>
+                            <groupId>net.anotheria</groupId>
+                            <artifactId>moskito-aop</artifactId>
+                        </aspectLibrary>
+                    </aspectLibraries>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjrt</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjtools</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>test-compile</goal>
+                        </goals>
+                        <configuration>
+                            <source>${source-version}</source>
+                            <target>${target-version}</target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <packaging>jar</packaging>
@@ -25,10 +65,44 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <source-version>1.8</source-version>
+        <target-version>1.8</target-version>
+
+        <moskito.version>2.7.2</moskito.version>
+        <aspectj.version>1.8.7</aspectj.version>
+        <aspectj-maven-plugin.version>1.10</aspectj-maven-plugin.version>
+        <aspectj-maven-plugin.complianceLevel>1.8</aspectj-maven-plugin.complianceLevel>
     </properties>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.anotheria</groupId>
+            <artifactId>moskito-core</artifactId>
+            <version>${moskito.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.anotheria</groupId>
+            <artifactId>moskito-web</artifactId>
+            <version>${moskito.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.anotheria</groupId>
+            <artifactId>moskito-webui</artifactId>
+            <version>${moskito.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.anotheria</groupId>
+            <artifactId>moskito-cdi</artifactId>
+            <version>${moskito.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-math3</artifactId>

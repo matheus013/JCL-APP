@@ -7,8 +7,8 @@
  * @author: Geymerson Ramos
  * @email: geymerson@laccan.ufal.br
  * Last-Updated:
- *           By: Geymerson Ramos
- *     Update #: 2017
+ *           By: Matheus Inácio
+ *     Update #: 2018
  */
 
 /* Change Log:
@@ -64,7 +64,7 @@ implementation {
         if(clockCounter % 60){
           call Temperature.read();
         }
-        if(clockCounter >= PERIODICITY_MULTIPLIER - RATE) {
+        if(clockCounter >= 10 - RATE) {
             clockCounter = 1;
             call Voltage.read();
             post sendPacket();
@@ -86,7 +86,7 @@ implementation {
     }
 
     event void Temperature.readDone(error_t err, uint16_t data) {
-        micaz_msg.Buffer[clockCounter - 1] = data;
+        micaz_msg.Buffer[(clockCounter/60) - 1] = data;
     }
 
     event void Send.sendDone(message_t* bufPtr, error_t error) {
@@ -112,7 +112,7 @@ implementation {
     task void sort() {
         int8_t i, j;
         int16_t currentValue;
-        for(j = 1; j < PERIODICITY_MULTIPLIER; j++) {
+        for(j = 1; j < 10; j++) {
             currentValue = micaz_msg.Buffer[j];
             i = j - 1;
             while(i >= 0 && micaz_msg.Buffer[i] > currentValue) {

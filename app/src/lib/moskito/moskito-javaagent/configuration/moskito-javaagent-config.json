@@ -1,0 +1,67 @@
+{
+    "@monitoringDefaultClassConfig":[
+        {
+            "patterns": [".*DAO.*"],
+            "subsystem": "default",
+            "category": "dao"
+        },
+        {
+            "patterns": [".*Repository.*"],
+            "subsystem": "default",
+            "category": "repo"
+        },
+        {
+            "patterns": [".*Service.*"],
+            "subsystem": "default",
+            "category": "service"
+        },
+        {
+            "patterns": [".*Manager.*"],
+            "subsystem": "default",
+            "category": "api"
+        },
+        {
+            "patterns": [".*Controller.*"],
+            "subsystem": "default",
+            "category": "web"
+        },
+        {
+          "patterns": [".*Servlet.*"],
+          "subsystem": "default",
+          "category": "web"
+        },
+        {
+          "patterns": [".*Action.*"],
+          "subsystem": "default",
+          "category": "web"
+        },
+        {
+          "patterns": [".*Filter.*"],
+          "subsystem": "default",
+          "category": "web"
+        }
+
+
+    ],
+    "@monitoringClassConfig": [
+        {
+            "patterns": ["test.*"],
+            "subsystem": "default",
+            "category": "web"
+        },
+        {
+            "patterns": ["net.anotheria.moskitosample.*"],
+            "subsystem": "default",
+            "category": "web"
+        },
+        {
+            "patterns": ["org.primefaces.*", "org.apache.commons.fileupload.FileItem"],
+            "subsystem": "default",
+            "category": "web"
+        }
+    ],
+    "weavingClassConfig": ["org.hibernate.*", "org.apache.ibatis.*"],
+    "mode": "PROFILING",
+    "startMoskitoBackend": true,
+    "moskitoBackendPort": 9451
+}

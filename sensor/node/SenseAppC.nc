@@ -5,8 +5,8 @@
  * @author: Geymerson Ramos
  * @email: geymerson@laccan.ufal.br
  * Last-Updated:
- *           By: Geymerson Ramos
- *     Update #: 2017
+ *           By: Matheus Inácio
+ *     Update #: 2018
  */
 
 /* Change Log:
