@@ -57,7 +57,6 @@ public class MicazMQTT implements MessageListener, MqttCallback {
                 temperatures[i] =
                         Micaz.calculateSensirion(tempMessage.getElement_Buffer(i), 0)[0];
             }
-
             voltage =
                     (1223 * 1024) / tempMessage.get_Voltage();
             return;

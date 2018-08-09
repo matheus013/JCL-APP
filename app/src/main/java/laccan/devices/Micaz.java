@@ -3,7 +3,6 @@ package laccan.devices;
 import implementations.dm_kernel.user.JCL_FacadeImpl;
 import interfaces.kernel.JCL_facade;
 import interfaces.kernel.JCL_result;
-import laccan.devices.helper.utils.Assistant;
 import laccan.lang.Lang;
 import laccan.memory.Memory;
 import laccan.persistence.StorageCSV;
@@ -77,20 +76,19 @@ public class Micaz implements MessageListener {
             MicazMsg tempMessage = (MicazMsg) message;
 
             nodeID = tempMessage.get_NodeID();
-            try {
-                environment = Assistant.environments[(nodeID - 1) / 5];
-            } catch (ArrayIndexOutOfBoundsException e) {
-                environment = "unknownEnvironment";
-                System.out.println("Unexpected environment id error.");
-            }
+//            try {
+//                environment = Assistant.environments[(nodeID - 1) / 5];
+//            } catch (ArrayIndexOutOfBoundsException e) {
+//                environment = "unknownEnvironment";
+//                System.out.println("Unexpected environment id error.");
+//            }
 
             for (int i = 0; i < tempMessage.get_Buffer().length; i++) {
                 temperatures[i] =
                         calculateSensirion(tempMessage.getElement_Buffer(i), 0)[0];
             }
 
-            voltage =
-                    (1223 * 1024) / tempMessage.get_Voltage();
+            voltage = (1223 * 1024) / tempMessage.get_Voltage();
             return;
         }
         System.out.println("Unable to process packet.");
@@ -111,8 +109,8 @@ public class Micaz implements MessageListener {
         System.out.println();
         System.out.println("Node:                   " + nodeID);
         System.out.println("NodeType:               " + "micaz");
-        System.out.println("Environment id:\t\t" + environment);
-        System.out.println("NodeLimit:              " + nodeLimit);
+//        System.out.println("Environment id:\t\t" + environment);
+//        System.out.println("NodeLimit:              " + nodeLimit);
         System.out.println("Voltage:                " + voltage);
         System.out.println("date:\t\t\t" + msDate);
     }
@@ -125,6 +123,7 @@ public class Micaz implements MessageListener {
         result = jcl.getValue(Lang.MEMORY_KEY);
         Memory memory = (Memory) result.getCorrectResult();
 
+        System.out.println("size: " + fullMemory.length());
         if (fullMemory.length() == 1440) {
             fullMemory.clear();
             memory.clear();
@@ -133,17 +132,17 @@ public class Micaz implements MessageListener {
         for (int i = 0; i < 8; i++) {
             storageCSV
                     .local("full.csv")
-                    .save(new String[]{String.valueOf((msDate - i * 8000)), String.valueOf(temperatures[i])});
-            Sample sample = new Sample(String.valueOf(nodeID), temperatures[i], (msDate - i * 8000));
+                    .save(new String[]{String.valueOf((msDate - i * 60000)), String.valueOf(temperatures[i])});
+            Sample sample = new Sample(String.valueOf(nodeID), temperatures[i], (msDate - i * 60000));
             fullMemory.add(sample);
         }
         boolean t = jcl.setValueUnlocking(Lang.FULL_MEMORY_KEY, fullMemory);
-        System.out.println(t);
+//        System.out.println(t);
         for (int i = 8; i < 10; i++) {
             storageCSV
                     .local("reduce.csv")
-                    .save(new String[]{String.valueOf((msDate - (i - 4) * 8000)), String.valueOf(temperatures[i])});
-            Sample sample = new Sample(String.valueOf(nodeID), temperatures[i], (msDate - i * 8000));
+                    .save(new String[]{String.valueOf((msDate - (i - 4) * 60000)), String.valueOf(temperatures[i])});
+            Sample sample = new Sample(String.valueOf(nodeID), temperatures[i], (msDate - i * 60000));
             memory.add(sample);
         }
         jcl.setValueUnlocking(Lang.MEMORY_KEY, memory);

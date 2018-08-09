@@ -41,6 +41,7 @@ implementation {
 
     bool busy = FALSE;
     uint8_t clockCounter = 1;
+    uint8_t clockCicles = 1;
     MicazMsg micaz_msg;
     message_t send_buff;
 
@@ -61,11 +62,15 @@ implementation {
     event void Control.stopDone(error_t err) { /* NOT IMPLEMENTED */ }
 
     event void Timer.fired() {
-        if(clockCounter % 60){
+        if(clockCounter == 60){
           call Temperature.read();
+          clockCicles++;
+          clockCounter = 1;
+          call Leds.led2On();
         }
-        if(clockCounter >= 10 - RATE) {
+        if(clockCicles == 8) {
             clockCounter = 1;
+            clockCicles = 1;
             call Voltage.read();
             post sendPacket();
         }
@@ -86,7 +91,7 @@ implementation {
     }
 
     event void Temperature.readDone(error_t err, uint16_t data) {
-        micaz_msg.Buffer[(clockCounter/60) - 1] = data;
+        micaz_msg.Buffer[clockCicles - 1] = data;
     }
 
     event void Send.sendDone(message_t* bufPtr, error_t error) {

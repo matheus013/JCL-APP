@@ -9,12 +9,12 @@ package laccan.devices;
 public class MicazMsg extends net.tinyos.message.Message {
 
     /** The default size of this message type in bytes. */
-    public static final int DEFAULT_MESSAGE_SIZE = 1204;
+    public static final int DEFAULT_MESSAGE_SIZE = 24;
 
     /** The Active Message type associated with this message. */
     public static final int AM_TYPE = 172;
 
-    /** Create a new MicazMsg of size 1204. */
+    /** Create a new MicazMsg of size 24. */
     public MicazMsg() {
         super(DEFAULT_MESSAGE_SIZE);
         amTypeSet(AM_TYPE);
@@ -94,7 +94,7 @@ public class MicazMsg extends net.tinyos.message.Message {
         } catch (ArrayIndexOutOfBoundsException aioobe) { /* Skip field */ }
         try {
             s += "  [Buffer=";
-            for (int i = 0; i < 600; i++) {
+            for (int i = 0; i < 10; i++) {
                 s += "0x"+Long.toHexString(getElement_Buffer(i) & 0xffff)+" ";
             }
             s += "]\n";
@@ -256,7 +256,7 @@ public class MicazMsg extends net.tinyos.message.Message {
      */
     public static int offset_Buffer(int index1) {
         int offset = 32;
-        if (index1 < 0 || index1 >= 600) throw new ArrayIndexOutOfBoundsException();
+        if (index1 < 0 || index1 >= 10) throw new ArrayIndexOutOfBoundsException();
         offset += 0 + index1 * 16;
         return (offset / 8);
     }
@@ -266,7 +266,7 @@ public class MicazMsg extends net.tinyos.message.Message {
      */
     public static int offsetBits_Buffer(int index1) {
         int offset = 32;
-        if (index1 < 0 || index1 >= 600) throw new ArrayIndexOutOfBoundsException();
+        if (index1 < 0 || index1 >= 10) throw new ArrayIndexOutOfBoundsException();
         offset += 0 + index1 * 16;
         return offset;
     }
@@ -275,7 +275,7 @@ public class MicazMsg extends net.tinyos.message.Message {
      * Return the entire array 'Buffer' as a short[]
      */
     public short[] get_Buffer() {
-        short[] tmp = new short[600];
+        short[] tmp = new short[10];
         for (int index0 = 0; index0 < numElements_Buffer(0); index0++) {
             tmp[index0] = getElement_Buffer(index0);
         }
@@ -309,14 +309,14 @@ public class MicazMsg extends net.tinyos.message.Message {
      * Return the total size, in bytes, of the array 'Buffer'
      */
     public static int totalSize_Buffer() {
-        return (9600 / 8);
+        return (160 / 8);
     }
 
     /**
      * Return the total size, in bits, of the array 'Buffer'
      */
     public static int totalSizeBits_Buffer() {
-        return 9600;
+        return 160;
     }
 
     /**
@@ -344,7 +344,7 @@ public class MicazMsg extends net.tinyos.message.Message {
      * Return the number of elements in the array 'Buffer'
      */
     public static int numElements_Buffer() {
-        return 600;
+        return 10;
     }
 
     /**
@@ -352,7 +352,7 @@ public class MicazMsg extends net.tinyos.message.Message {
      * for the given dimension.
      */
     public static int numElements_Buffer(int dimension) {
-        int array_dims[] = { 600,  };
+        int array_dims[] = { 10,  };
         if (dimension < 0 || dimension >= 1) throw new ArrayIndexOutOfBoundsException();
         if (array_dims[dimension] == 0) throw new IllegalArgumentException("Array dimension "+dimension+" has unknown size");
         return array_dims[dimension];
