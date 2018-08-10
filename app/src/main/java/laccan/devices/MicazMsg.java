@@ -8,19 +8,27 @@ package laccan.devices;
 
 public class MicazMsg extends net.tinyos.message.Message {
 
-    /** The default size of this message type in bytes. */
+    /**
+     * The default size of this message type in bytes.
+     */
     public static final int DEFAULT_MESSAGE_SIZE = 24;
 
-    /** The Active Message type associated with this message. */
+    /**
+     * The Active Message type associated with this message.
+     */
     public static final int AM_TYPE = 172;
 
-    /** Create a new MicazMsg of size 24. */
+    /**
+     * Create a new MicazMsg of size 24.
+     */
     public MicazMsg() {
         super(DEFAULT_MESSAGE_SIZE);
         amTypeSet(AM_TYPE);
     }
 
-    /** Create a new MicazMsg of the given data_length. */
+    /**
+     * Create a new MicazMsg of the given data_length.
+     */
     public MicazMsg(int data_length) {
         super(data_length);
         amTypeSet(AM_TYPE);
@@ -81,21 +89,21 @@ public class MicazMsg extends net.tinyos.message.Message {
     }
 
     /**
-     /* Return a String representation of this message. Includes the
+     * /* Return a String representation of this message. Includes the
      * message type name and the non-indexed field values.
      */
     public String toString() {
         String s = "Message <MicazMsg> \n";
         try {
-            s += "  [NodeID=0x"+Long.toHexString(get_NodeID())+"]\n";
+            s += "  [NodeID=0x" + Long.toHexString(get_NodeID()) + "]\n";
         } catch (ArrayIndexOutOfBoundsException aioobe) { /* Skip field */ }
         try {
-            s += "  [Voltage=0x"+Long.toHexString(get_Voltage())+"]\n";
+            s += "  [Voltage=0x" + Long.toHexString(get_Voltage()) + "]\n";
         } catch (ArrayIndexOutOfBoundsException aioobe) { /* Skip field */ }
         try {
             s += "  [Buffer=";
             for (int i = 0; i < 10; i++) {
-                s += "0x"+Long.toHexString(getElement_Buffer(i) & 0xffff)+" ";
+                s += "0x" + Long.toHexString(getElement_Buffer(i) & 0xffff) + " ";
             }
             s += "]\n";
         } catch (ArrayIndexOutOfBoundsException aioobe) { /* Skip field */ }
@@ -143,7 +151,7 @@ public class MicazMsg extends net.tinyos.message.Message {
      * Return the value (as a int) of the field 'NodeID'
      */
     public int get_NodeID() {
-        return (int)getUIntBEElement(offsetBits_NodeID(), 16);
+        return (int) getUIntBEElement(offsetBits_NodeID(), 16);
     }
 
     /**
@@ -206,7 +214,7 @@ public class MicazMsg extends net.tinyos.message.Message {
      * Return the value (as a int) of the field 'Voltage'
      */
     public int get_Voltage() {
-        return (int)getUIntBEElement(offsetBits_Voltage(), 16);
+        return (int) getUIntBEElement(offsetBits_Voltage(), 16);
     }
 
     /**
@@ -295,7 +303,7 @@ public class MicazMsg extends net.tinyos.message.Message {
      * Return an element (as a short) of the array 'Buffer'
      */
     public short getElement_Buffer(int index1) {
-        return (short)getSIntBEElement(offsetBits_Buffer(index1), 16);
+        return (short) getSIntBEElement(offsetBits_Buffer(index1), 16);
     }
 
     /**
@@ -352,9 +360,10 @@ public class MicazMsg extends net.tinyos.message.Message {
      * for the given dimension.
      */
     public static int numElements_Buffer(int dimension) {
-        int array_dims[] = { 10,  };
+        int array_dims[] = {10,};
         if (dimension < 0 || dimension >= 1) throw new ArrayIndexOutOfBoundsException();
-        if (array_dims[dimension] == 0) throw new IllegalArgumentException("Array dimension "+dimension+" has unknown size");
+        if (array_dims[dimension] == 0)
+            throw new IllegalArgumentException("Array dimension " + dimension + " has unknown size");
         return array_dims[dimension];
     }
 

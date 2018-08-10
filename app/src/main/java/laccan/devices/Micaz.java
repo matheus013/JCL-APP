@@ -64,7 +64,7 @@ public class Micaz implements MessageListener {
         System.out.println(timeTaken);
         StorageCSV storageCSV = new StorageCSV();
         try {
-            storageCSV.local("times_colet").save(new String[]{String.valueOf(timeTaken)});
+            storageCSV.local("log.csv").save(new String[]{String.valueOf(timeTaken), "time", "post"});
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -76,22 +76,17 @@ public class Micaz implements MessageListener {
             MicazMsg tempMessage = (MicazMsg) message;
 
             nodeID = tempMessage.get_NodeID();
-//            try {
-//                environment = Assistant.environments[(nodeID - 1) / 5];
-//            } catch (ArrayIndexOutOfBoundsException e) {
-//                environment = "unknownEnvironment";
-//                System.out.println("Unexpected environment id error.");
-//            }
 
             for (int i = 0; i < tempMessage.get_Buffer().length; i++) {
                 temperatures[i] =
                         calculateSensirion(tempMessage.getElement_Buffer(i), 0)[0];
             }
-
-            voltage = (1223 * 1024) / tempMessage.get_Voltage();
+            if (tempMessage.get_Voltage() != 0)
+                voltage = (1223 * 1024) / tempMessage.get_Voltage();
+            else System.err.println("err in voltage read");
             return;
         }
-        System.out.println("Unable to process packet.");
+        System.err.println("Unable to process packet.");
         return;
     }
 
@@ -109,8 +104,6 @@ public class Micaz implements MessageListener {
         System.out.println();
         System.out.println("Node:                   " + nodeID);
         System.out.println("NodeType:               " + "micaz");
-//        System.out.println("Environment id:\t\t" + environment);
-//        System.out.println("NodeLimit:              " + nodeLimit);
         System.out.println("Voltage:                " + voltage);
         System.out.println("date:\t\t\t" + msDate);
     }

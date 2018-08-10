@@ -7,8 +7,7 @@ CFLAGS += -I$(TOSDIR)/lib/net \
           -I$(TOSDIR)/lib/net/le \
           -I$(TOSDIR)/lib/net/ctp
 
-#CFLAGS += -DTOSH_DATA_LENGTH=50
-PFLAGS += -DTOSH_DATA_LENGTH=50
+PFLAGS += -DTOSH_DATA_LENGTH=80
 
 BUILD_EXTRA_DEPS += MicazMsg.class
 

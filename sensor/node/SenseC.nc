@@ -1,14 +1,14 @@
 /* SenseC.nc
  *
  * implementation of the sensor nodes.
- * We're collecting data from pressure
- * temperature, light, humidity and node voltage
+ * We're collecting temperature data and
+ * and sending in 8 minutes intervals
  *
  * @author: Geymerson Ramos
  * @email: geymerson@laccan.ufal.br
  * Last-Updated:
- *           By: Matheus Inácio
- *     Update #: 2018
+ *           By: Geymerson Ramos
+ *     Update date: August 2018
  */
 
 /* Change Log:
@@ -36,12 +36,14 @@ module SenseC {
 
 implementation {
     task void sendPacket();
+
     task void sort();
     task void reduction();
+    uint8_t timerCounter = 1;
+    uint8_t timerMultiplier = 1;
 
     bool busy = FALSE;
     uint8_t clockCounter = 1;
-    uint8_t clockCicles = 1;
     MicazMsg micaz_msg;
     message_t send_buff;
 
@@ -62,20 +64,23 @@ implementation {
     event void Control.stopDone(error_t err) { /* NOT IMPLEMENTED */ }
 
     event void Timer.fired() {
-        if(clockCounter == 60){
-          call Temperature.read();
-          clockCicles++;
-          clockCounter = 1;
-          call Leds.led2On();
-        }
-        if(clockCicles == 8) {
-            clockCounter = 1;
-            clockCicles = 1;
-            call Voltage.read();
-            post sendPacket();
+
+        if(timerCounter >= 60) {
+            call Leds.led2On();
+            timerCounter = 1;
+            call Temperature.read();
+
+            if(timerMultiplier >= PERIODICITY_MULTIPLIER) {
+                timerMultiplier = 1;
+                call Voltage.read();
+                post sendPacket();
+            }
+            else {
+                timerMultiplier++;
+            }
         }
         else {
-            clockCounter++;
+            timerCounter++;
         }
     }
 
@@ -91,7 +96,8 @@ implementation {
     }
 
     event void Temperature.readDone(error_t err, uint16_t data) {
-        micaz_msg.Buffer[clockCicles - 1] = data;
+        call Leds.led2Off();
+        micaz_msg.Buffer[timerMultiplier - 1] = data;
     }
 
     event void Send.sendDone(message_t* bufPtr, error_t error) {
@@ -136,5 +142,4 @@ implementation {
             micaz_msg.Buffer[FULL + i - start] = micaz_msg.Buffer[i];
         }
     }
-
 }

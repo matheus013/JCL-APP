@@ -29,11 +29,8 @@ public class StorageCSV implements Storage {
                 String[] nextRecord;
                 NumericValidation validation = new NumericValidation();
                 while ((nextRecord = csvReader.readNext()) != null) {
-//                    System.out.println(nextRecord[]);
                     if (!validation.testWithSize(nextRecord, 2)) continue;
-//                    System.out.println(nextRecord);
                     list.add(new Sample("2", Double.valueOf(nextRecord[1]), Long.valueOf(nextRecord[0])));
-//                    System.out.println(nextRecord);
                 }
             }
         } catch (IOException e) {

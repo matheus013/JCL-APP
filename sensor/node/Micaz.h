@@ -9,8 +9,8 @@
  * @author: Geymerson Ramos
  * @email: geymerson@laccan.ufal.br
  * Last-Updated:
- *           By: Matheus Inácio
- *     Update #: 2018
+ *           By: Geymerson Ramos
+ *     Update date: August 9, 2018
  */
 
 /* Change Log:
@@ -23,10 +23,10 @@
 //PERIODICITY_MULTIPLIER = 10 previously
 enum {
     TIMER_PERIOD_MILLI = 1024,
-    PERIODICITY_MULTIPLIER = 600,
+    PERIODICITY_MULTIPLIER = 8,
+	  FULL = 8,
     AM_MICAZMSG = 0xac,
-    RATE = 2,
-    FULL = 8
+    RATE = 2
 };
 
 typedef nx_struct micazMsg {
