@@ -81,6 +81,6 @@ public class Sample {
     }
 
     public String toJson() {
-        return "json";
+        return String.format("{\"nodeID\" : %s, \"temperature\" : %s, \"date\" : %s}", node, String.valueOf(temperature), String.valueOf(date));
     }
 }

@@ -1,6 +1,15 @@
 <resources>
-    <string name="app_name">ViewJCLAPP</string>
+    <string name="app_name">Temperature Monitor</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="_27">27º</string>
+    <string name="country_prompt">Choose a country</string>
+
+    <string-array name="country_arrays">
+        <item>Sensor ID 661 - Lab 16</item>
+        <item>Sensor ID 662 - Lab 16</item>
+        <item>Sensor ID 663 - Lab 16</item>
+        <item>Sensor ID 664 - Lab 16</item>
+    </string-array>
 </resources>

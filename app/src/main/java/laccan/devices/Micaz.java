@@ -18,29 +18,18 @@ import java.io.IOException;
 
 public class Micaz implements MessageListener {
 
-    private static String nativeLibraryPath =
-            System.getProperty("user.dir") + "/sense_lib/native/Linux/x86_64-unknown-linux-gnu/";
-
-    //	static {
-    ////		System.load(nativeLibraryPath + "libgetenv.so");
-    ////		System.load(nativeLibraryPath + "libtoscomm.so");
-    //	}
-
     private PhoenixSource phoenix;
     private MoteIF mif;
     private long msDate;
 
     //nodeID
     private int nodeID;
-    private int nodeLimit;
 
     //Current node voltage (in millivolt)
     private double voltage;
 
     private double[] temperatures = new double[10];
 
-    //Node location
-    private String environment;
 
     public Micaz(final String source) {
         phoenix = BuildSource.makePhoenix(source, PrintStreamMessenger.err);
@@ -64,7 +53,7 @@ public class Micaz implements MessageListener {
         System.out.println(timeTaken);
         StorageCSV storageCSV = new StorageCSV();
         try {
-            storageCSV.local("log.csv").save(new String[]{String.valueOf(timeTaken), "time", "post"});
+            storageCSV.local("log.csv").save(new String[]{String.valueOf(timeTaken), "time", "post", "jcl"});
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -116,7 +105,6 @@ public class Micaz implements MessageListener {
         result = jcl.getValue(Lang.MEMORY_KEY);
         Memory memory = (Memory) result.getCorrectResult();
 
-        System.out.println("size: " + fullMemory.length());
         if (fullMemory.length() == 1440) {
             fullMemory.clear();
             memory.clear();
@@ -130,7 +118,6 @@ public class Micaz implements MessageListener {
             fullMemory.add(sample);
         }
         boolean t = jcl.setValueUnlocking(Lang.FULL_MEMORY_KEY, fullMemory);
-//        System.out.println(t);
         for (int i = 8; i < 10; i++) {
             storageCSV
                     .local("reduce.csv")

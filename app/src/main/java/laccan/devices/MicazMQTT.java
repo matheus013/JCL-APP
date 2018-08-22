@@ -1,6 +1,5 @@
 package laccan.devices;
 
-import laccan.devices.helper.utils.Assistant;
 import laccan.lang.Lang;
 import laccan.persistence.StorageCSV;
 import net.tinyos.message.Message;
@@ -15,24 +14,15 @@ import org.eclipse.paho.client.mqttv3.*;
 import java.io.IOException;
 
 public class MicazMQTT implements MessageListener, MqttCallback {
-    private static String nativeLibraryPath =
-            System.getProperty("user.dir") + "/sense_lib/native/Linux/x86_64-unknown-linux-gnu/";
 
     private PhoenixSource phoenix;
     private MoteIF mif;
     private long msDate;
-
+    private double voltage;
     //nodeID
     private int nodeID;
-    private int nodeLimit;
-
-    //Current node voltage (in millivolt)
-    private double voltage;
 
     private double[] temperatures = new double[10];
-
-    //Node location
-    private String environment;
 
     public MicazMQTT(String source) {
         phoenix = BuildSource.makePhoenix(source, PrintStreamMessenger.err);
@@ -46,23 +36,17 @@ public class MicazMQTT implements MessageListener, MqttCallback {
             MicazMsg tempMessage = (MicazMsg) message;
 
             nodeID = tempMessage.get_NodeID();
-            try {
-                environment = Assistant.environments[(nodeID - 1) / 5];
-            } catch (ArrayIndexOutOfBoundsException e) {
-                environment = "unknownEnvironment";
-                System.out.println("Unexpected environment id error.");
-            }
 
             for (int i = 0; i < tempMessage.get_Buffer().length; i++) {
                 temperatures[i] =
                         Micaz.calculateSensirion(tempMessage.getElement_Buffer(i), 0)[0];
             }
-            voltage =
-                    (1223 * 1024) / tempMessage.get_Voltage();
+            if (tempMessage.get_Voltage() != 0)
+                voltage = (1223 * 1024) / tempMessage.get_Voltage();
+            else System.err.println("err in voltage read");
             return;
         }
         System.out.println("Unable to process packet.");
-        return;
     }
 
     @Override
@@ -75,16 +59,14 @@ public class MicazMQTT implements MessageListener, MqttCallback {
         stopwatch.start();
         try {
             save(); //Send to cloud
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (MqttException e) {
+        } catch (IOException | MqttException e) {
             e.printStackTrace();
         }
         long timeTaken = stopwatch.getTime();
         System.out.println(timeTaken);
         StorageCSV storageCSV = new StorageCSV();
         try {
-            storageCSV.local("times_colet").save(new String[]{String.valueOf(timeTaken)});
+            storageCSV.local("log.csv").save(new String[]{String.valueOf(timeTaken), "time", "post", "mqtt"});
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -98,7 +80,7 @@ public class MicazMQTT implements MessageListener, MqttCallback {
         for (int i = 0; i < 8; i++) {
             storageCSV
                     .local("full.csv")
-                    .save(new String[]{String.valueOf((msDate - i * 8000)), String.valueOf(temperatures[i])});
+                    .save(new String[]{String.valueOf((msDate - i * 60000)), String.valueOf(temperatures[i])});
             Sample sample = new Sample(String.valueOf(nodeID), temperatures[i], (msDate - i * 8000));
             MqttMessage message = new MqttMessage(sample.toJson().getBytes());
             myClient.publish(Lang.FULL_MEMORY_KEY, message);
@@ -106,8 +88,8 @@ public class MicazMQTT implements MessageListener, MqttCallback {
         for (int i = 8; i < 10; i++) {
             storageCSV
                     .local("reduce.csv")
-                    .save(new String[]{String.valueOf((msDate - (i - 4) * 8000)), String.valueOf(temperatures[i])});
-            Sample sample = new Sample(String.valueOf(nodeID), temperatures[i], (msDate - i * 8000));
+                    .save(new String[]{String.valueOf((msDate - (i - 4) * 60000)), String.valueOf(temperatures[i])});
+            Sample sample = new Sample(String.valueOf(nodeID), temperatures[i], (msDate - i * 60000));
             MqttMessage message = new MqttMessage(sample.toJson().getBytes());
             myClient.publish(Lang.MEMORY_KEY, message);
         }
