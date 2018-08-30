@@ -73,6 +73,7 @@ public class Assistant {
         jcl.instantiateGlobalVarAsy(Lang.MEMORY_KEY, memory);
         jcl.instantiateGlobalVarAsy(Lang.FULL_MEMORY_KEY, memory);
         jcl.instantiateGlobalVarAsy(Lang.INIT_KEY, "init");
+        jcl.instantiateGlobalVarAsy(Lang.LAST_READ_KEY, "0");
     }
 
     /**

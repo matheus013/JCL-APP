@@ -116,6 +116,8 @@ public class Micaz implements MessageListener {
                     .save(new String[]{String.valueOf((msDate - i * 60000)), String.valueOf(temperatures[i])});
             Sample sample = new Sample(String.valueOf(nodeID), temperatures[i], (msDate - i * 60000));
             fullMemory.add(sample);
+            if(i == 7)
+                jcl.setValueUnlocking(Lang.LAST_READ_KEY, temperatures[i]);
         }
         boolean t = jcl.setValueUnlocking(Lang.FULL_MEMORY_KEY, fullMemory);
         for (int i = 8; i < 10; i++) {

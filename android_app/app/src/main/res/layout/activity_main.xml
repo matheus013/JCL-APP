@@ -34,4 +34,14 @@
         app:layout_constraintTop_toBottomOf="@+id/current-temperature"
         app:layout_constraintVertical_bias="0.129" />
 
+    <Button
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="refreshOnClicked"
+        android:text="Refresh"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="330dp"
+        tools:ignore="MissingConstraints" />
+
 </android.support.constraint.ConstraintLayout>
