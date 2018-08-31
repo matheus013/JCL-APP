@@ -10,6 +10,7 @@ import net.tinyos.packet.PhoenixSource;
 import net.tinyos.util.PrintStreamMessenger;
 import org.apache.commons.lang3.time.StopWatch;
 import org.eclipse.paho.client.mqttv3.*;
+import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 import java.io.IOException;
 
@@ -66,7 +67,7 @@ public class MicazMQTT implements MessageListener, MqttCallback {
         System.out.println(timeTaken);
         StorageCSV storageCSV = new StorageCSV();
         try {
-            storageCSV.local("log.csv").save(new String[]{String.valueOf(timeTaken), "time", "post", "mqtt"});
+            storageCSV.local("log.csv").save(new String[]{String.valueOf(timeTaken), "time", "post", "mqtt-p"});
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -74,7 +75,10 @@ public class MicazMQTT implements MessageListener, MqttCallback {
 
     private void save() throws IOException, MqttException {
         StorageCSV storageCSV = new StorageCSV();
-        MqttClient myClient = new MqttClient("tcp://localhost:1883", "00");
+        MemoryPersistence persistence = new MemoryPersistence();
+        MqttClient myClient = new MqttClient("tcp://localhost:1883", "00", persistence);
+        MqttConnectOptions connOpts = new MqttConnectOptions();
+        connOpts.setCleanSession(true);
         myClient.setCallback(this);
         myClient.connect();
         for (int i = 0; i < 8; i++) {

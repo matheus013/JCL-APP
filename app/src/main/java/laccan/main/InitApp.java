@@ -31,9 +31,9 @@ public class InitApp {
         } catch (ParseException exp) {
             System.out.println("Unexpected exception:" + exp.getMessage());
         }
-//        Assistant.init();
+        Assistant.init();
         JCL_facade jcl = JCL_FacadeImpl.getInstance();
-        System.out.println((String) jcl.getValue("lastReading").getCorrectResult());
+//        System.out.println((String) jcl.getValue("lastReading").getCorrectResult());
         jcl.instantiateGlobalVarAsy(Lang.LAST_READ_KEY, "0");
     }
 
