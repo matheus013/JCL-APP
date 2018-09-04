@@ -8,4 +8,7 @@ public class Lang {
     public final static String INIT_KEY = "init";
     public final static String NODES_IDS_KEY = "nodes";
     public final static String RESULT = "result";
+    public final static String REQUEST = "request";
+    public static final String RESPONSE = "response";
+
 }
