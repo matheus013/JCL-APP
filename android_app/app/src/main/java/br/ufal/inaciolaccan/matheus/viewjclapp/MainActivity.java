@@ -88,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
         JCL_facade jcl = JCL_FacadeImpl.getInstance();
 
         Button err = findViewById(R.id.current_temperature);
+        String result = jcl.getValue("lastReading").getCorrectResult().toString();
+        System.out.println(result);
+        System.err.print(result);
         err.setText(jcl.getValue("lastReading").getCorrectResult().toString() + "º");
 
     }

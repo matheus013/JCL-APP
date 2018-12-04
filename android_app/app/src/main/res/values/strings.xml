@@ -4,12 +4,13 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="_27">27º</string>
-    <string name="country_prompt">Choose a country</string>
+    <string name="country_prompt">Escolha o sensor</string>
+    <string name="refresh">Refresh</string>
 
     <string-array name="country_arrays">
         <item>Sensor ID 661 - Lab 16</item>
-        <item>Sensor ID 662 - Lab 16</item>
-        <item>Sensor ID 663 - Lab 16</item>
-        <item>Sensor ID 664 - Lab 16</item>
+        <item>Sensor ID 700 - Apresentação Pibic</item>
+        <item>Sensor ID 663 - Lab 15</item>
+        <item>Sensor ID 664 - Lab 17</item>
     </string-array>
 </resources>
